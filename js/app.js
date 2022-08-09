@@ -6,40 +6,48 @@
 //     eyeSlideUp.style.transform = "translate-y(-30px)";
 //     eyeSlideDown.style.transform = "translate-y(30px)";
 // });
-// let x, y;
-// document.addEventListener('mousemove', (event) => {
-//     x = event.x;
-//     y = event.y;
-//     console.log(x + ' ' + y);
-//     console.log(window.innerWidth)
-// });
-
-
-// let pupils = document.querySelectorAll('.pupil_big')
-// document.onmousemove = function (event) {
-//     let x = event.clientX * 100 / window.innerWidth + "%"
-//     let y = event.clientY * 100 / window.innerHeight + "%"
-//     console.log(x + ' ' + y);
-//     for (let i = 0; i < 2; i++) {
-//         // pupils[i].style.left = x;
-//         // pupils[i].style.top = y;
-//         pupils[i].style.transform = "translate(" + x + "," + y + ")";
-//     }
-// }
-let pupils = document.querySelectorAll('.pupil_big');
-// pupils.forEach(element => {
-//     element.style.transform = "translate(10px ,10px)";
-// });
-let arr = [2, 3, 5, 7]
-
-arr.map();
 let eyeBg = document.querySelectorAll('.eye_bg')
-let eyeBgWidth;
-// eyeBg.map(function (element) { eyeBgWidth = element.getBoundingClientRect().width });
-// let eyeBgHeight = eyeBg.map().getBoundingClientRect().height;
-
-// eyeBg.map(element => { eyeBgWidth = element.getBoundingClientRect().width; });
-// eyeBg.map(element => { eyeBgHeight = element.getBoundingClientRect().height; });
-// console.log(eyeBgHeight + ' ' + eyeBgWidth);
-// let eyeBgHeight = eyeBg.getBoundingClientRect().width;
-// eyeBgWidth.forEach(element => { console.log(element) })
+let pupils = document.querySelectorAll('.pupil_big');
+let eyeBgWidth = [];
+let eyeBgHeight = [];
+let pupilsWidth = [];
+let pupilsHeight = [];
+let lengthDifferenceWidth = []
+let lengthDifferenceHeight = []
+let pupilsX = []
+let pupilsY = []
+let clientWidth = document.documentElement.clientWidth
+let clientHeight = document.documentElement.clientHeight
+let coefX = [], coefY = []
+let pupilsDisplacementX = [], pupilsDisplacementY = []
+for (let i = 0; i < eyeBg.length; i++) {
+    eyeBgWidth[i] = Math.round(eyeBg[i].getBoundingClientRect().width)
+    eyeBgHeight[i] = Math.round(eyeBg[i].getBoundingClientRect().height)
+}
+for (let i = 0; i < pupils.length; i++) {
+    pupilsWidth[i] = Math.round(pupils[i].getBoundingClientRect().width)
+    pupilsHeight[i] = Math.round(pupils[i].getBoundingClientRect().height)
+}
+for (let i = 0; i < eyeBg.length; i++) {
+    lengthDifferenceWidth[i] = eyeBgWidth[i] - pupilsWidth[i]
+    lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
+    lengthDifferenceHeight[i] = eyeBgHeight[i] - pupilsHeight[i]
+    lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
+}
+for (let i = 0; i < pupils.length; i++) {
+    pupilsX[i] = Math.round(pupils[i].getBoundingClientRect().left) + Math.round(pupilsWidth[i] / 2)
+    pupilsY[i] = Math.round(pupils[i].getBoundingClientRect().top) + Math.round(pupilsHeight[i] / 2)
+}
+for (let i = 0; i < pupils.length; i++) {
+    coefX[i] = lengthDifferenceWidth[i] / clientWidth
+    coefY[i] = lengthDifferenceHeight[i] / clientHeight
+}
+document.onmousemove = function (event) {
+    let x = event.clientX - 500
+    let y = event.clientY
+    for (let i = 0; i < pupils.length; i++) {
+        pupilsDisplacementX[i] = x * coefX[i]
+        pupilsDisplacementY[i] = y * coefY[i]
+        pupils[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
+    }
+}
