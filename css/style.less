@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+  }
+
+  &:focus {
+    outline: hidden;
+  }
+}
+.anim {
+  transition: all ease 0.2s;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background: #f5f5f5;
+  width: 100%;
+  font-family: "TT Norms Pro";
+  color: #000000;
+}
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+.header_inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 0 0 657px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 804px;
+    height: 513px;
+    top: 0px;
+    left: 0px;
+    background-image: url(../img/header_bg.svg);
+    background-position: -43px 0px;
+    background-repeat: no-repeat;
+  }
+}
+.eyes1 {
+  position: absolute;
+  top: 0px;
+  left: 43px;
+}
+.logo {
+  padding-top: 15px;
+  font-family: "TT Norms Pro";
+  font-weight: 700;
+  font-size: 54px;
+  z-index: 1;
+  &:hover {
+    .eye-slide_up {
+      transform: translateY(-30px);
+      .anim;
+    }
+    .eye-slide_down {
+      transform: translateY(30px);
+      .anim;
+    }
+  }
+}
+.schedule {
+  position: relative;
+  padding: 22px 173px 22px 84px;
+  background: #efcb52;
+  border-radius: 20px 0px 0px 20px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  .schedule_eye {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+  }
+  .eye-slide_up,
+  .eye-slide_down {
+    .anim;
+  }
+  &:hover {
+    .eye-slide_up {
+      transform: translateY(-30px);
+    }
+    .eye-slide_down {
+      transform: translateY(30px);
+    }
+  }
+  .eyes2 {
+    position: absolute;
+    top: 63px;
+    left: 0px;
+  }
+}
+.yellow_txt {
+  color: #efcb52;
+}
+.sec2 {
+  margin-top: 122px;
+  &_inner {
+    text-align: center;
+  }
+  .marquee {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    &-span {
+      display: inline-block;
+      padding-left: 100%;
+      -webkit-animation: scroll 10s infinite linear;
+      -moz-animation: scroll 10s infinite linear;
+      animation: scroll 10s infinite linear;
+    }
+    font-weight: 700;
+    font-size: 114px;
+    text-transform: uppercase;
+  }
+  @keyframes scroll {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(-100%, 0);
+    }
+  }
+  .t2 {
+    font-weight: 800;
+    font-size: 39px;
+    text-transform: uppercase;
+  }
+  .t3 {
+    font-weight: 700;
+    font-size: 30px;
+  }
+}
+.register_btn {
+  margin-top: 30px;
+  padding: 14px 64px;
+  background: #efcb52;
+  border-radius: 5px;
+  font-family: "TT Norms Pro";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  transition: transform 0.7s;
+  &:hover {
+    transform: scale(1.02) translate(0, -0.15em);
+  }
+}
