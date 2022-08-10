@@ -47,6 +47,31 @@ button {
   background-position: -43px 0px;
   background-repeat: no-repeat;
 }
+.marquee-horizontal {
+  position: relative;
+  z-index: 200;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.marquee-horizontal .track-horizontal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+}
+@keyframes marquee-horizontal {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .eyes1 {
   position: absolute;
   top: 0px;
@@ -105,29 +130,20 @@ button {
 .sec2_inner {
   text-align: center;
 }
-.sec2 .marquee {
-  display: block;
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
+.sec2 .marquee-horizontal {
+  height: 137px;
+}
+.sec2 .track-horizontal {
+  animation: marquee-horizontal 40s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+.sec2 .marquee-text {
+  margin-right: 8vw;
+  flex: 0 0 auto;
   font-weight: 700;
   font-size: 114px;
+  line-height: 137px;
   text-transform: uppercase;
-}
-.sec2 .marquee-span {
-  display: inline-block;
-  padding-left: 100%;
-  -webkit-animation: scroll 10s infinite linear;
-  -moz-animation: scroll 10s infinite linear;
-  animation: scroll 10s infinite linear;
-}
-@keyframes scroll {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(-100%, 0);
-  }
 }
 .sec2 .t2 {
   font-weight: 800;
@@ -151,4 +167,205 @@ button {
 }
 .register_btn:hover {
   transform: scale(1.02) translate(0, -0.15em);
+}
+.sec3 {
+  margin-top: 175px;
+}
+.sec3_inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 72px;
+}
+.sec3 .main_content {
+  flex-shrink: 0;
+}
+.sec3 .t1 {
+  padding-left: 112px;
+  font-weight: 800;
+  font-size: 100px;
+  line-height: 120px;
+  text-transform: uppercase;
+  margin-bottom: 33px;
+}
+.sec3 .t2 {
+  position: relative;
+  padding: 73px 35px 65px 170px;
+  background-color: #efcb52;
+  border-radius: 0px 20px 20px 0px;
+}
+.sec3 .t2::before {
+  position: absolute;
+  content: url(../img/exclamation_mark.svg);
+  top: -25px;
+  right: -21px;
+  width: 62px;
+  height: 62px;
+}
+.sec3 .t2 .schedule_eye {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+.sec3 .t2 .eye-slide_up,
+.sec3 .t2 .eye-slide_down {
+  transition: all ease 0.2s;
+}
+.sec3 .t2:hover .eye-slide_up {
+  transform: translateY(-30px);
+}
+.sec3 .t2:hover .eye-slide_down {
+  transform: translateY(30px);
+}
+.sec3 .t2 .tt1 {
+  padding-left: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.sec3 .t2 .tt2 {
+  margin-top: 50px;
+  max-width: 612px;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 44px;
+}
+.sec3 .tabs {
+  margin-top: 70px;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 30px;
+  color: #dbdbdb;
+}
+.sec3 .tabs-item {
+  margin-bottom: 30px;
+  position: relative;
+  padding-left: 25px;
+  transition: all ease 0.2s;
+}
+.sec3 .tabs-item::before {
+  position: absolute;
+  content: "•";
+  top: 0px;
+  left: 0px;
+}
+.sec3 .tabs-item:hover {
+  color: #000000;
+  cursor: default;
+}
+.sec4 {
+  margin-top: 78px;
+}
+.sec4 .marquee-horizontal {
+  height: 114px;
+}
+.sec4 .track-horizontal {
+  animation: marquee-horizontal 40s linear infinite;
+  /* manipulate the speed of the marquee by changing "40s" line above*/
+}
+.sec4 .marquee-text {
+  margin-right: 8vw;
+  flex: 0 0 auto;
+  font-weight: 800;
+  font-size: 97px;
+  text-transform: uppercase;
+}
+.sec4-main {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+.sec4 .man {
+  position: relative;
+  max-width: 350px;
+}
+.sec4 .man .round-text {
+  width: 380px;
+  height: 380px;
+  position: absolute;
+  left: 65px;
+  top: 25px;
+  animation: rotate 40s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-359deg);
+  }
+}
+.sec4 .man svg text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -2.1px;
+}
+.sec4 .man-photo {
+  width: 232px;
+  height: 232px;
+  margin: 97px 0px 0px 140px;
+}
+.sec4 .txt {
+  max-width: 950px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 47px;
+}
+.sec4 .txt .t1 {
+  padding: 0px 170px 25px 45px;
+}
+.sec4 .txt .t2 {
+  padding: 23px 160px 40px 45px;
+  background: #fff6d9;
+  border-radius: 20px 0px 0px 20px;
+}
+.sec5 {
+  margin-top: 259px;
+}
+.sec5_inner {
+  position: relative;
+  background: #efcb52;
+  border-radius: 20px 20px 0px 0px;
+  width: 380px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 21px 0px 60px 0px;
+}
+.sec5_inner .t1 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+.sec5_inner .logo {
+  margin-top: 163px;
+}
+.sec5_inner .register_btn {
+  position: absolute;
+  top: -3px;
+  left: 425px;
+}
+.sec5_inner .schedule_eye {
+  position: absolute;
+  top: 140px;
+  left: 100px;
+}
+.sec5_inner .schedule_eye svg {
+  width: 173px;
+  height: 90px;
+}
+.sec5_inner .eye-slide_up,
+.sec5_inner .eye-slide_down {
+  transition: all ease 0.2s;
+}
+.sec5_inner:hover .eye-slide_up {
+  transform: translateY(-30px);
+}
+.sec5_inner:hover .eye-slide_down {
+  transform: translateY(30px);
+}
+.eye:hover {
+  cursor: url(../img/eye_irritant.png), pointer;
+}
+.eye:hover .veins path {
+  fill: #e4afac;
 }

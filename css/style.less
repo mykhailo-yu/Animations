@@ -48,6 +48,32 @@ button {
     background-repeat: no-repeat;
   }
 }
+.marquee-horizontal {
+  position: relative;
+  z-index: 200;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  .track-horizontal {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+  }
+
+  @keyframes marquee-horizontal {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
 .eyes1 {
   position: absolute;
   top: 0px;
@@ -109,29 +135,21 @@ button {
   &_inner {
     text-align: center;
   }
-  .marquee {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    &-span {
-      display: inline-block;
-      padding-left: 100%;
-      -webkit-animation: scroll 10s infinite linear;
-      -moz-animation: scroll 10s infinite linear;
-      animation: scroll 10s infinite linear;
-    }
+  .marquee-horizontal {
+    height: 137px;
+  }
+  .track-horizontal {
+    animation: marquee-horizontal 40s linear infinite;
+    /* manipulate the speed of the marquee by changing "40s" line above*/
+  }
+  .marquee-text {
+    margin-right: 8vw;
+    flex: 0 0 auto;
+    text-transform: uppercase;
     font-weight: 700;
     font-size: 114px;
+    line-height: 137px;
     text-transform: uppercase;
-  }
-  @keyframes scroll {
-    0% {
-      transform: translate(0, 0);
-    }
-    100% {
-      transform: translate(-100%, 0);
-    }
   }
   .t2 {
     font-weight: 800;
@@ -157,3 +175,230 @@ button {
     transform: scale(1.02) translate(0, -0.15em);
   }
 }
+
+.sec3 {
+  margin-top: 175px;
+  &_inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+  }
+  .main_content {
+    flex-shrink: 0;
+  }
+  .t1 {
+    padding-left: 112px;
+    font-weight: 800;
+    font-size: 100px;
+    line-height: 120px;
+    text-transform: uppercase;
+    margin-bottom: 33px;
+  }
+  .t2 {
+    position: relative;
+    padding: 73px 35px 65px 170px;
+    background-color: #efcb52;
+    border-radius: 0px 20px 20px 0px;
+    &::before {
+      position: absolute;
+      content: url(../img/exclamation_mark.svg);
+      top: -25px;
+      right: -21px;
+      width: 62px;
+      height: 62px;
+    }
+    .schedule_eye {
+      position: absolute;
+      top: 30px;
+      left: 40px;
+    }
+    .eye-slide_up,
+    .eye-slide_down {
+      .anim;
+    }
+    &:hover {
+      .eye-slide_up {
+        transform: translateY(-30px);
+      }
+      .eye-slide_down {
+        transform: translateY(30px);
+      }
+    }
+    .tt1 {
+      padding-left: 15px;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 48px;
+      text-transform: uppercase;
+    }
+    .tt2 {
+      margin-top: 50px;
+      max-width: 612px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+  .tabs {
+    margin-top: 70px;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 30px;
+    color: #dbdbdb;
+    &-item {
+      margin-bottom: 30px;
+      position: relative;
+      padding-left: 25px;
+      &::before {
+        position: absolute;
+        content: "•";
+        top: 0px;
+        left: 0px;
+      }
+      .anim;
+      &:hover {
+        color: #000000;
+        cursor: default;
+      }
+    }
+  }
+}
+.sec4 {
+  margin-top: 78px;
+  .marquee-horizontal {
+    height: 114px;
+  }
+  .track-horizontal {
+    animation: marquee-horizontal 40s linear infinite;
+    /* manipulate the speed of the marquee by changing "40s" line above*/
+  }
+  .marquee-text {
+    margin-right: 8vw;
+    flex: 0 0 auto;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 97px;
+    text-transform: uppercase;
+  }
+
+  &-main {
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .man {
+    position: relative;
+    max-width: 350px;
+    .round-text {
+      width: 380px;
+      height: 380px;
+      position: absolute;
+      left: 65px;
+      top: 25px;
+      animation: rotate 40s linear infinite;
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(-359deg);
+        }
+      }
+    }
+    svg {
+      text {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: -2.1px;
+      }
+    }
+    &-photo {
+      width: 232px;
+      height: 232px;
+      margin: 97px 0px 0px 140px;
+    }
+  }
+  .txt {
+    max-width: 950px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+    .t1 {
+      padding: 0px 170px 25px 45px;
+    }
+    .t2 {
+      padding: 23px 160px 40px 45px;
+      background: #fff6d9;
+      border-radius: 20px 0px 0px 20px;
+    }
+  }
+}
+.sec5 {
+  margin-top: 259px;
+
+  &_inner {
+    position: relative;
+    background: #efcb52;
+    border-radius: 20px 20px 0px 0px;
+    width: 380px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 21px 0px 60px 0px;
+    .t1 {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    .logo {
+      margin-top: 163px;
+    }
+    .register_btn {
+      position: absolute;
+      top: -3px;
+      left: 425px;
+    }
+    .schedule_eye {
+      position: absolute;
+      top: 140px;
+      left: 100px;
+      svg {
+        width: 173px;
+        height: 90px;
+      }
+    }
+    .eye-slide_up,
+    .eye-slide_down {
+      .anim;
+    }
+    &:hover {
+      .eye-slide_up {
+        transform: translateY(-30px);
+      }
+      .eye-slide_down {
+        transform: translateY(30px);
+      }
+    }
+  }
+}
+///////////////////////////////
+.eye:hover {
+  cursor: url(../img/eye_irritant.png), pointer;
+  .veins {
+    path {
+      fill: #e4afac;
+      // animation: color 2s 1 linear;
+      // @keyframes color {
+      //   0% {
+      //     fill: initial;
+      //   }
+      //   50% {
+      //     fill: #e4afac;
+      //   }
+      //   100% {
+      //     fill: transparent;
+      //   }
+      // }
+    }
+  }
+}
+///////////////////////////////
