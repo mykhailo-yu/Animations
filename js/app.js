@@ -8,6 +8,7 @@
 // });
 let eyeBg = document.querySelectorAll('.eye_bg')
 let pupils = document.querySelectorAll('.pupil_big');
+let pupils1 = document.querySelectorAll('.pupil');
 let eyeBgWidth = [];
 let eyeBgHeight = [];
 let pupilsWidth = [];
@@ -48,6 +49,8 @@ document.onmousemove = function (event) {
     for (let i = 0; i < pupils.length; i++) {
         pupilsDisplacementX[i] = x * coefX[i]
         pupilsDisplacementY[i] = y * coefY[i]
-        pupils[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
+        eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
+        pupils[i].style.transform = "translate(" + (1.5 * pupilsDisplacementX[i]) + "px," + (1.5 * pupilsDisplacementY[i]) + "px  )";
+        pupils1[i].style.transform = "translate(" + (2 * pupilsDisplacementX[i]) + "px," + (2 * pupilsDisplacementY[i]) + "px  )";
     }
 }
