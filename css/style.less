@@ -15,7 +15,6 @@
   transition: all ease 0.2s;
 }
 body {
-  font-family: "Oswald", sans-serif;
   width: 100%;
   font-family: "TT Norms Pro";
   color: #000000;
@@ -206,6 +205,19 @@ button {
   margin-top: 122px;
   &_inner {
     text-align: center;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: url(../img/arrow1.svg);
+      top: 321px;
+      left: 292px;
+    }
+    &::after {
+      position: absolute;
+      content: url(../img/arrow2.svg);
+      top: 344px;
+      left: 621px;
+    }
   }
   .marquee-horizontal {
     height: 137px;
@@ -234,6 +246,7 @@ button {
   }
 }
 .register_btn {
+  display: inline-block;
   margin-top: 30px;
   padding: 14px 64px;
   background: #efcb52;
@@ -242,7 +255,9 @@ button {
   font-weight: 700;
   font-size: 20px;
   line-height: 32px;
+  color: #000000;
   transition: transform 0.7s;
+  text-decoration: none;
   &:hover {
     transform: scale(1.02) translate(0, -0.15em);
   }
@@ -282,8 +297,8 @@ button {
     }
     .schedule_eye {
       position: absolute;
-      top: 30px;
-      left: 40px;
+      top: 70px;
+      right: 40px;
     }
     .eye-slide_up,
     .eye-slide_down {
@@ -481,6 +496,7 @@ button {
   .man {
     position: relative;
     max-width: 350px;
+
     .round-text {
       width: 380px;
       height: 380px;
@@ -508,6 +524,19 @@ button {
       width: 232px;
       height: 232px;
       margin: 97px 0px 0px 140px;
+      position: relative;
+      &:hover {
+        .man-eye-closed {
+          visibility: visible;
+        }
+      }
+      .man-eye-closed {
+        visibility: hidden;
+
+        position: absolute;
+        top: 81px;
+        right: 79px;
+      }
     }
   }
   .txt {
@@ -536,6 +565,23 @@ button {
     margin: 0 auto;
     text-align: center;
     padding: 21px 0px 60px 0px;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 646px;
+      height: 735px;
+      top: -340px;
+      left: -488px;
+      background-image: url(../img/sec5_bg.svg);
+      background-position: -43px 0px;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      position: absolute;
+      content: url(../img/arrow3.svg);
+      top: -238px;
+      left: 186px;
+    }
     .t1 {
       font-weight: 700;
       font-size: 30px;
@@ -712,24 +758,28 @@ button {
   }
 }
 ///////////////////////////////
-.eye:hover {
+.veins:hover {
   cursor: url(../img/eye_irritant.png), pointer;
   .veins {
-    path {
-      fill: #e4afac;
-      // animation: color 2s 1 linear;
-      // @keyframes color {
-      //   0% {
-      //     fill: initial;
-      //   }
-      //   50% {
-      //     fill: #e4afac;
-      //   }
-      //   100% {
-      //     fill: transparent;
-      //   }
-      // }
-    }
+    fill: #e4afac;
+    // animation: color 2s 1 linear;
+    // @keyframes color {
+    //   0% {
+    //     fill: initial;
+    //   }
+    //   50% {
+    //     fill: #e4afac;
+    //   }
+    //   100% {
+    //     fill: transparent;
+    //   }
+    // }
   }
 }
 ///////////////////////////////
+.eye_bg,
+.pupil_big,
+.pupil {
+  transition: scale 0.2s linear;
+  transition: transform 1s linear;
+}

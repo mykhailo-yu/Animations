@@ -32,9 +32,9 @@ function eyeMove() {
     }
     for (let i = 0; i < eyeBg.length; i++) {
         lengthDifferenceWidth[i] = eyeBgWidth[i] - pupilsWidth[i]
-        lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
+        // lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
         lengthDifferenceHeight[i] = eyeBgHeight[i] - pupilsHeight[i]
-        lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
+        // lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
     }
     for (let i = 0; i < pupils.length; i++) {
         pupilsX[i] = Math.round(pupils[i].getBoundingClientRect().left) + Math.round(pupilsWidth[i] / 2)
@@ -51,9 +51,33 @@ function eyeMove() {
             pupilsDisplacementX[i] = x * coefX[i]
             pupilsDisplacementY[i] = y * coefY[i]
             eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
-            pupils[i].style.transform = "translate(" + (1.5 * pupilsDisplacementX[i]) + "px," + (1.5 * pupilsDisplacementY[i]) + "px  )";
-            pupils1[i].style.transform = "translate(" + (2 * pupilsDisplacementX[i]) + "px," + (2 * pupilsDisplacementY[i]) + "px  )";
+            pupils[i].style.transform = "translate(" + (1.3 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
+            pupils1[i].style.transform = "translate(" + (1.7 * pupilsDisplacementX[i]) + "px," + (1.7 * pupilsDisplacementY[i]) + "px  )";
         }
     }
 }
-setTimeout(eyeMove, 1000)
+setTimeout(
+    setInterval(eyeMove, 2000)
+    , 1000)
+function mouseOnBtn() {
+    for (let i = 0; i < pupils.length; i++) {
+        pupils[i].style.scale = '1.1'
+    }
+}
+function mouseOutBtn() {
+    for (let i = 0; i < pupils.length; i++) {
+        pupils[i].style.scale = '1'
+    }
+}
+document.getElementById("register_btn1").onmouseenter = function () {
+    mouseOnBtn()
+}
+document.getElementById("register_btn2").onmouseenter = function () {
+    mouseOnBtn()
+}
+document.getElementById("register_btn1").onmouseout = function () {
+    mouseOutBtn()
+}
+document.getElementById("register_btn2").onmouseout = function () {
+    mouseOutBtn()
+}
