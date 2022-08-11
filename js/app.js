@@ -21,6 +21,21 @@ let clientWidth = document.documentElement.clientWidth
 let clientHeight = document.documentElement.clientHeight
 let coefX = [], coefY = []
 let pupilsDisplacementX = [], pupilsDisplacementY = []
+let cursorContainer = document.querySelector('.custom-cursor-container')
+let cursor = document.getElementById('cursor')
+let veinsPseudo = document.querySelectorAll('.veins-pseudo')
+let veins = document.querySelectorAll('.veins')
+let x, y
+let isVein = false
+setTimeout(
+    document.onmousemove = function (event) {
+        x = event.clientX
+        y = event.clientY
+        eyeMove()
+        if (isVein === true) {
+            cursorMove()
+        }
+    }, 1000)
 function eyeMove() {
     for (let i = 0; i < eyeBg.length; i++) {
         eyeBgWidth[i] = Math.round(eyeBg[i].getBoundingClientRect().width)
@@ -44,21 +59,35 @@ function eyeMove() {
         coefX[i] = lengthDifferenceWidth[i] / clientWidth
         coefY[i] = lengthDifferenceHeight[i] / clientHeight
     }
-    document.onmousemove = function (event) {
-        let x = event.clientX - 500
-        let y = event.clientY
-        for (let i = 0; i < pupils.length; i++) {
-            pupilsDisplacementX[i] = x * coefX[i]
-            pupilsDisplacementY[i] = y * coefY[i]
-            eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
-            pupils[i].style.transform = "translate(" + (1.3 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
-            pupils1[i].style.transform = "translate(" + (1.7 * pupilsDisplacementX[i]) + "px," + (1.7 * pupilsDisplacementY[i]) + "px  )";
-        }
+
+    for (let i = 0; i < pupils.length; i++) {
+        pupilsDisplacementX[i] = (x - 500) * coefX[i]
+        pupilsDisplacementY[i] = y * coefY[i]
+        eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
+        pupils[i].style.transform = "translate(" + (1.3 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
+        pupils1[i].style.transform = "translate(" + (1.7 * pupilsDisplacementX[i]) + "px," + (1.7 * pupilsDisplacementY[i]) + "px  )";
     }
 }
-setTimeout(
-    setInterval(eyeMove, 2000)
-    , 1000)
+
+for (const veinP of veinsPseudo) {
+    veinP.onmouseenter = function () {
+        cursorContainer.style.opacity = '1'
+        veinP.style.cursor = 'none'
+        veinP.parentNode.firstElementChild.style.opacity = '0'
+    }
+    veinP.onmouseover = () => {
+        isVein = true
+    }
+
+    veinP.onmouseout = function () {
+        cursorContainer.style.opacity = '0'
+        isVein = false
+        veinP.parentNode.firstElementChild.style.opacity = '1'
+    }
+}
+function cursorMove() {
+    cursor.style.transform = "translate(" + x + "px, " + y + "px)"
+}
 function mouseOnBtn() {
     for (let i = 0; i < pupils.length; i++) {
         pupils[i].style.scale = '1.1'
