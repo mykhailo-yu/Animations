@@ -1,11 +1,40 @@
-// let logo = document.querySelector('.logo');
-// let eyeSlideUp = document.querySelectorAll('.eye-slide_up');
-// let eyeSlideDown = document.querySelectorAll('.eye-slide_down');
-// logo.addEventListener('onmouseover', function () {
-//     eyeSlideUp.style.display = "none";
-//     eyeSlideUp.style.transform = "translate-y(-30px)";
-//     eyeSlideDown.style.transform = "translate-y(30px)";
-// });
+let eyeSlideUp = document.querySelectorAll(".eye-slide_up1")
+let eyeSlideDown = document.querySelectorAll(".eye-slide_down1")
+let schedule = document.querySelector(".schedule")
+document.querySelector('.logo').onmouseover = () => {
+    for (const eyeUp of eyeSlideUp) {
+        eyeUp.style.transform = "translateY(-30px)"
+    }
+    for (const eyeDown of eyeSlideDown) {
+        eyeDown.style.transform = "translateY(30px)"
+    }
+
+};
+document.querySelector('.logo').onmouseout = () => {
+    for (const eyeUp of eyeSlideUp) {
+        eyeUp.style.transform = "initial"
+    }
+    for (const eyeDown of eyeSlideDown) {
+        eyeDown.style.transform = "initial"
+    }
+};
+schedule.onmouseover = () => {
+    for (const eyeUp of eyeSlideUp) {
+        eyeUp.style.transform = "translateY(-30px)"
+    }
+    for (const eyeDown of eyeSlideDown) {
+        eyeDown.style.transform = "translateY(30px)"
+    }
+
+};
+schedule.onmouseout = () => {
+    for (const eyeUp of eyeSlideUp) {
+        eyeUp.style.transform = "initial"
+    }
+    for (const eyeDown of eyeSlideDown) {
+        eyeDown.style.transform = "initial"
+    }
+};
 let eyeBg = document.querySelectorAll('.eye_bg')
 let pupils = document.querySelectorAll('.pupil_big');
 let pupils1 = document.querySelectorAll('.pupil');
@@ -28,14 +57,14 @@ let veins = document.querySelectorAll('.veins')
 let x, y
 let isVein = false
 setTimeout(
-    document.onmousemove = function (event) {
+    document.onmousemove = (event) => {
         x = event.clientX
         y = event.clientY
         eyeMove()
         if (isVein === true) {
             cursorMove()
         }
-    }, 1000)
+    }, 2000)
 function eyeMove() {
     for (let i = 0; i < eyeBg.length; i++) {
         eyeBgWidth[i] = Math.round(eyeBg[i].getBoundingClientRect().width)
@@ -109,4 +138,25 @@ document.getElementById("register_btn1").onmouseout = function () {
 }
 document.getElementById("register_btn2").onmouseout = function () {
     mouseOutBtn()
+}
+
+function openTab(evt, tabid) {
+    // Declare all variables
+    let i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.querySelectorAll(".tab")
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.querySelectorAll(".tabs-item")
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(tabid).style.display = "block";
+    evt.currentTarget.className += " active";
 }

@@ -268,6 +268,13 @@ button {
 }
 .sec3 .main_content {
   flex-shrink: 0;
+  position: relative;
+}
+.sec3 .main_content .active {
+  display: block;
+}
+.sec3 .tab {
+  display: none;
 }
 .sec3 .t1 {
   padding-left: 112px;
@@ -321,11 +328,15 @@ button {
   line-height: 44px;
 }
 .sec3 .tabs {
+  z-index: 999;
   margin-top: 70px;
   list-style-type: none;
   font-weight: 700;
   font-size: 30px;
   color: #dbdbdb;
+}
+.sec3 .tabs .active {
+  color: #000000;
 }
 .sec3 .tabs-item {
   margin-bottom: 30px;
@@ -341,7 +352,7 @@ button {
 }
 .sec3 .tabs-item:hover {
   color: #000000;
-  cursor: default;
+  cursor: pointer;
 }
 .sec3 .eyes4 {
   position: absolute;
@@ -589,6 +600,12 @@ button {
 .sec5_inner .schedule_eye svg {
   width: 173px;
   height: 90px;
+}
+.sec5_inner .schedule_eye-open .eye-slide_up {
+  transform: translateY(-30px);
+}
+.sec5_inner .schedule_eye-open .eye-slide_down {
+  transform: translateY(30px);
 }
 .sec5_inner .eye-slide_up,
 .sec5_inner .eye-slide_down {

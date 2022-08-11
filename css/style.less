@@ -275,6 +275,13 @@ button {
   }
   .main_content {
     flex-shrink: 0;
+    position: relative;
+    .active {
+      display: block;
+    }
+  }
+  .tab {
+    display: none;
   }
   .t1 {
     padding-left: 112px;
@@ -330,11 +337,15 @@ button {
     }
   }
   .tabs {
+    z-index: 999;
     margin-top: 70px;
     list-style-type: none;
     font-weight: 700;
     font-size: 30px;
     color: #dbdbdb;
+    .active {
+      color: #000000;
+    }
     &-item {
       margin-bottom: 30px;
       position: relative;
@@ -348,7 +359,7 @@ button {
       .anim;
       &:hover {
         color: #000000;
-        cursor: default;
+        cursor: pointer;
       }
     }
   }
@@ -607,6 +618,14 @@ button {
       svg {
         width: 173px;
         height: 90px;
+      }
+      &-open {
+        .eye-slide_up {
+          transform: translateY(-30px);
+        }
+        .eye-slide_down {
+          transform: translateY(30px);
+        }
       }
     }
     .eye-slide_up,
