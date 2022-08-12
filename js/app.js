@@ -67,18 +67,18 @@ setTimeout(
     }, 2000)
 function eyeMove() {
     for (let i = 0; i < eyeBg.length; i++) {
-        eyeBgWidth[i] = Math.round(eyeBg[i].getBoundingClientRect().width)
-        eyeBgHeight[i] = Math.round(eyeBg[i].getBoundingClientRect().height)
+        eyeBgWidth[i] = Math.round(veins[i].getBoundingClientRect().width)
+        eyeBgHeight[i] = Math.round(veins[i].getBoundingClientRect().height)
     }
     for (let i = 0; i < pupils.length; i++) {
-        pupilsWidth[i] = Math.round(pupils[i].getBoundingClientRect().width)
-        pupilsHeight[i] = Math.round(pupils[i].getBoundingClientRect().height)
+        pupilsWidth[i] = Math.round(eyeBg[i].getBoundingClientRect().width)
+        pupilsHeight[i] = Math.round(eyeBg[i].getBoundingClientRect().height)
     }
     for (let i = 0; i < eyeBg.length; i++) {
         lengthDifferenceWidth[i] = eyeBgWidth[i] - pupilsWidth[i]
-        // lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
+        lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
         lengthDifferenceHeight[i] = eyeBgHeight[i] - pupilsHeight[i]
-        // lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
+        lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
     }
     for (let i = 0; i < pupils.length; i++) {
         pupilsX[i] = Math.round(pupils[i].getBoundingClientRect().left) + Math.round(pupilsWidth[i] / 2)
@@ -93,8 +93,8 @@ function eyeMove() {
         pupilsDisplacementX[i] = (x - 400) * coefX[i]
         pupilsDisplacementY[i] = y * coefY[i]
         eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
-        pupils[i].style.transform = "translate(" + (1.3 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
-        pupils1[i].style.transform = "translate(" + (1.7 * pupilsDisplacementX[i]) + "px," + (1.7 * pupilsDisplacementY[i]) + "px  )";
+        pupils[i].style.transform = "translate(" + (1.2 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
+        pupils1[i].style.transform = "translate(" + (1.5 * pupilsDisplacementX[i]) + "px," + (1.5 * pupilsDisplacementY[i]) + "px  )";
     }
 }
 
