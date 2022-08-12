@@ -17,6 +17,7 @@ body {
   width: 100%;
   font-family: "TT Norms Pro";
   color: #000000;
+  overflow-x: hidden;
 }
 button {
   background: transparent;
@@ -26,24 +27,25 @@ button {
 .container {
   width: 1440px;
   margin: 0 auto;
+  position: relative;
+}
+.dot img {
+  position: relative;
+  top: -20px;
+  left: 70px;
 }
 .header_inner {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 70px 0 0 657px;
+  padding: 24px 67px 15px 104px;
 }
-.header_inner::before {
-  position: absolute;
-  content: "";
-  width: 804px;
-  height: 513px;
-  top: 0px;
-  left: 0px;
-  background-image: url(../img/header_bg.svg);
-  background-position: -43px 0px;
-  background-repeat: no-repeat;
+.header-wrapper,
+.sec2-wrapper,
+.sec5-wrapper {
+  background: #b4a0ff;
+  background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
 }
 .marquee-horizontal {
   position: relative;
@@ -72,8 +74,8 @@ button {
 }
 .eyes1 {
   position: absolute;
-  top: 0px;
-  left: 43px;
+  top: 61px;
+  left: 0px;
 }
 .eyes1-wrapper {
   position: relative;
@@ -83,43 +85,43 @@ button {
 }
 .eyes1 .eye1_veins {
   position: absolute;
-  left: 85px;
-  top: 0px;
+  left: 8px;
+  top: 82px;
 }
 .eyes1 .eye1_pupil-orange {
   position: absolute;
-  top: -20px;
-  left: 130px;
+  top: 135px;
+  left: 80px;
 }
 .eyes1 .eye1pupil-black {
   position: absolute;
-  top: 0px;
-  left: 147px;
+  top: 150px;
+  left: 100px;
 }
 .eyes1 .eye1pupil {
   position: absolute;
-  top: 25px;
-  left: 160px;
+  top: 155px;
+  left: 130px;
 }
 .eyes1 .eye2_veins {
   position: absolute;
-  top: 32px;
-  left: 339px;
+  top: 269px;
+  left: 352px;
 }
 .eyes1 .eye2_pupil-orange {
   position: absolute;
-  top: 65px;
-  left: 360px;
+  top: 290px;
+  left: 380px;
 }
 .eyes1 .eye2pupil-black {
   position: absolute;
-  top: 80px;
-  left: 375px;
+  top: 302px;
+  left: 398px;
 }
 .eyes1 .eye2pupil {
   position: absolute;
-  top: 89px;
-  left: 388px;
+  top: 309px;
+  left: 412px;
 }
 .eyes1 .eyes-line {
   position: absolute;
@@ -127,48 +129,38 @@ button {
   left: 135px;
 }
 .logo {
-  padding-top: 15px;
-  font-family: "TT Norms Pro";
-  font-weight: 700;
-  font-size: 54px;
-  z-index: 1;
+  position: relative;
+  border: 3px solid #000000;
+  border-radius: 20px;
+  padding: 41px 400px 32px 25px;
+}
+.logo .logo_eye {
+  position: absolute;
+  top: 30px;
+  right: 46px;
+}
+.logo .eye-slide_up,
+.logo .eye-slide_down {
+  transition: all ease 0.2s;
 }
 .logo:hover .eye-slide_up {
   transform: translateY(-30px);
-  transition: all ease 0.2s;
 }
 .logo:hover .eye-slide_down {
   transform: translateY(30px);
-  transition: all ease 0.2s;
 }
 .schedule {
   position: relative;
-  padding: 22px 173px 22px 84px;
-  background: #efcb52;
-  border-radius: 20px 0px 0px 20px;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-}
-.schedule .schedule_eye {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-}
-.schedule .eye-slide_up,
-.schedule .eye-slide_down {
-  transition: all ease 0.2s;
-}
-.schedule:hover .eye-slide_up {
-  transform: translateY(-30px);
-}
-.schedule:hover .eye-slide_down {
-  transform: translateY(30px);
+  padding: 5px 39px 0px 0px;
+  font-weight: 1000;
+  font-size: 31px;
+  line-height: 37px;
+  letter-spacing: 0.3px;
 }
 .schedule .eyes3 {
   position: absolute;
-  top: 63px;
-  left: 0px;
+  top: -3px;
+  left: -104px;
 }
 .schedule .eyes3 .eyes3-wrapper {
   position: relative;
@@ -180,40 +172,38 @@ button {
 }
 .schedule .eyes3 .eye3-pupil-orange {
   position: absolute;
-  top: 22px;
-  left: 18px;
+  top: 14px;
+  left: 17px;
 }
 .schedule .eyes3 .eye3-pupil-black {
   position: absolute;
-  top: 34px;
+  top: 25px;
   left: 27px;
 }
 .schedule .eyes3 .eye3-pupil {
   position: absolute;
-  top: 39px;
+  top: 28px;
   left: 31px;
 }
 .yellow_txt {
   color: #efcb52;
 }
 .sec2 {
-  margin-top: 122px;
+  margin-top: 0px;
+}
+.sec2-wrapper {
+  border-radius: 0px 0px 125px 188px;
 }
 .sec2_inner {
+  padding-bottom: 242px;
   text-align: center;
   position: relative;
-}
-.sec2_inner::before {
-  position: absolute;
-  content: url(../img/arrow1.svg);
-  top: 321px;
-  left: 292px;
 }
 .sec2_inner::after {
   position: absolute;
   content: url(../img/arrow2.svg);
-  top: 344px;
-  left: 621px;
+  top: 365px;
+  left: 637px;
 }
 .sec2 .marquee-horizontal {
   height: 137px;
@@ -225,45 +215,171 @@ button {
 .sec2 .marquee-text {
   margin-right: 8vw;
   flex: 0 0 auto;
-  font-weight: 700;
-  font-size: 114px;
-  line-height: 137px;
   text-transform: uppercase;
+  font-weight: 800;
+  font-size: 97px;
+  line-height: 116px;
 }
 .sec2 .t2 {
-  font-weight: 800;
-  font-size: 39px;
-  text-transform: uppercase;
-}
-.sec2 .t3 {
-  font-weight: 700;
+  margin-top: 18px;
+  font-weight: 400;
   font-size: 30px;
+  line-height: 36px;
+}
+.sec2 .eyes4 {
+  position: absolute;
+  bottom: -11px;
+  left: 234px;
+  z-index: 99;
+}
+.sec2 .eyes4 .eye4-bg {
+  position: absolute;
+  top: -12px;
+  left: 480px;
+}
+.sec2 .eyes4 .eyes4-wrapper {
+  position: relative;
+}
+.sec2 .eyes4 .eye4-veins {
+  position: absolute;
+  top: -12px;
+  left: 480px;
+}
+.sec2 .eyes4 .eye4-pupil-orange {
+  position: absolute;
+  top: 0px;
+  left: 499px;
+}
+.sec2 .eyes4 .eye4-pupil-black {
+  position: absolute;
+  top: 12px;
+  left: 512px;
+}
+.sec2 .eyes4 .eye4-pupil {
+  position: absolute;
+  top: 15px;
+  left: 520px;
+}
+.sec2 .eyes5 {
+  position: absolute;
+  top: 146px;
+  right: -93px;
+}
+.sec2 .eyes5 .eyes5-wrapper {
+  position: relative;
+}
+.sec2 .eyes5 .eye5-bg {
+  position: absolute;
+  top: 269px;
+  right: 469px;
+}
+.sec2 .eyes5 .eye5-veins {
+  position: absolute;
+  top: 269px;
+  right: 477px;
+}
+.sec2 .eyes5 .eye5-pupil-orange {
+  position: absolute;
+  top: 285px;
+  right: 520px;
+}
+.sec2 .eyes5 .eye5-pupil-black {
+  position: absolute;
+  top: 293px;
+  right: 536px;
+}
+.sec2 .eyes5 .eye5-pupil {
+  position: absolute;
+  top: 300px;
+  right: 553px;
+}
+.sec2 .eyes5 .eye6-bg {
+  position: absolute;
+  top: -31px;
+  right: -49px;
+}
+.sec2 .eyes5 .eye6-veins {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.sec2 .eyes5 .eye6-pupil-orange {
+  position: absolute;
+  top: 89px;
+  right: 210px;
+}
+.sec2 .eyes5 .eye6-pupil-black {
+  position: absolute;
+  top: 99px;
+  right: 247px;
+}
+.sec2 .eyes5 .eye6-pupil {
+  position: absolute;
+  top: 113px;
+  right: 298px;
+}
+.sec2 .eyes5 .eye7-bg {
+  position: absolute;
+  top: 156px;
+  right: 462px;
+}
+.sec2 .eyes5 .eye7-veins {
+  position: absolute;
+  top: 157px;
+  right: 466px;
+}
+.sec2 .eyes5 .eye7-pupil-orange {
+  position: absolute;
+  top: 166px;
+  right: 489px;
+}
+.sec2 .eyes5 .eye7-pupil-black {
+  position: absolute;
+  top: 170px;
+  right: 498px;
+}
+.sec2 .eyes5 .eye7-pupil {
+  position: absolute;
+  top: 175px;
+  right: 506px;
 }
 .register_btn {
+  position: relative;
+  margin: 56px 0 0 46px;
   display: inline-block;
-  margin-top: 30px;
   padding: 14px 64px;
-  background: #efcb52;
+  background: #000000;
   border-radius: 5px;
   font-family: "TT Norms Pro";
   font-weight: 700;
   font-size: 20px;
   line-height: 32px;
-  color: #000000;
+  text-transform: capitalize;
+  color: #f2cdff;
   transition: transform 0.7s;
   text-decoration: none;
   z-index: 9;
 }
+.register_btn::before {
+  position: absolute;
+  content: "";
+  width: 97%;
+  height: 90%;
+  top: 6px;
+  left: 6px;
+  border: 3px solid #000000;
+  border-radius: 5px;
+}
 .register_btn:hover {
-  transform: scale(1.02) translate(0, -0.15em);
+  transform: scale(1.02) translate(-5px, -6px);
 }
 .sec3 {
-  margin-top: 175px;
+  margin-top: 64px;
 }
 .sec3_inner {
   display: flex;
   justify-content: space-between;
-  gap: 72px;
+  gap: 81px;
   position: relative;
 }
 .sec3 .main_content {
@@ -277,35 +393,49 @@ button {
   display: none;
 }
 .sec3 .t1 {
-  padding-left: 112px;
+  padding-left: 105px;
   font-weight: 800;
-  font-size: 100px;
-  line-height: 120px;
+  font-size: 97px;
+  line-height: 116px;
   text-transform: uppercase;
-  margin-bottom: 33px;
+  margin-bottom: 43px;
 }
 .sec3 .t2 {
   position: relative;
-  padding: 73px 35px 65px 170px;
-  background-color: #efcb52;
+  padding: 82px 54px 88px 108px;
+  background: #b4a0ff;
+  background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
   border-radius: 0px 20px 20px 0px;
 }
 .sec3 .t2::before {
   position: absolute;
   content: url(../img/exclamation_mark.svg);
   top: -25px;
-  right: -21px;
+  right: -34px;
   width: 62px;
   height: 62px;
+  z-index: 9;
+}
+.sec3 .t2::after {
+  position: absolute;
+  content: "";
+  width: 102%;
+  height: 98%;
+  bottom: 11px;
+  left: 0px;
+  border: 3px solid #000000;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
 }
 .sec3 .t2 .schedule_eye {
   position: absolute;
-  top: 70px;
-  right: 40px;
+  top: 87px;
+  right: 60px;
 }
 .sec3 .t2 .eye-slide_up,
 .sec3 .t2 .eye-slide_down {
   transition: all ease 0.2s;
+  fill: #f4c0ff;
 }
 .sec3 .t2:hover .eye-slide_up {
   transform: translateY(-30px);
@@ -314,14 +444,14 @@ button {
   transform: translateY(30px);
 }
 .sec3 .t2 .tt1 {
-  padding-left: 15px;
+  padding-left: 0px;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
   text-transform: uppercase;
 }
 .sec3 .t2 .tt2 {
-  margin-top: 50px;
+  margin-top: 19px;
   max-width: 612px;
   font-weight: 400;
   font-size: 30px;
@@ -339,7 +469,7 @@ button {
   color: #000000;
 }
 .sec3 .tabs-item {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   position: relative;
   padding-left: 25px;
   transition: all ease 0.2s;
@@ -354,124 +484,8 @@ button {
   color: #000000;
   cursor: pointer;
 }
-.sec3 .eyes4 {
-  position: absolute;
-  top: 63px;
-  left: 0px;
-}
-.sec3 .eyes4 .eye4-bg {
-  position: absolute;
-  top: -12px;
-  left: 480px;
-}
-.sec3 .eyes4 .eyes4-wrapper {
-  position: relative;
-}
-.sec3 .eyes4 .eye4-veins {
-  position: absolute;
-  top: -8px;
-  left: 499px;
-}
-.sec3 .eyes4 .eye4-pupil-orange {
-  position: absolute;
-  top: 7px;
-  left: 519px;
-}
-.sec3 .eyes4 .eye4-pupil-black {
-  position: absolute;
-  top: 12px;
-  left: 525px;
-}
-.sec3 .eyes4 .eye4-pupil {
-  position: absolute;
-  top: 15px;
-  left: 530px;
-}
-.sec3 .eyes5 {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-.sec3 .eyes5 .eyes5-wrapper {
-  position: relative;
-}
-.sec3 .eyes5 .eye5-bg {
-  position: absolute;
-  top: -122px;
-  right: 359px;
-}
-.sec3 .eyes5 .eye5-veins {
-  position: absolute;
-  top: -121px;
-  right: 367px;
-}
-.sec3 .eyes5 .eye5-pupil-orange {
-  position: absolute;
-  top: -112px;
-  right: 401px;
-}
-.sec3 .eyes5 .eye5-pupil-black {
-  position: absolute;
-  top: -98px;
-  right: 416px;
-}
-.sec3 .eyes5 .eye5-pupil {
-  position: absolute;
-  top: -90px;
-  right: 434px;
-}
-.sec3 .eyes5 .eye6-bg {
-  position: absolute;
-  bottom: -260px;
-  right: 0px;
-}
-.sec3 .eyes5 .eye6-veins {
-  position: absolute;
-  top: -306px;
-  right: 0px;
-}
-.sec3 .eyes5 .eye6-pupil-orange {
-  position: absolute;
-  top: -245px;
-  right: 32px;
-}
-.sec3 .eyes5 .eye6-pupil-black {
-  position: absolute;
-  top: -230px;
-  right: 75px;
-}
-.sec3 .eyes5 .eye6-pupil {
-  position: absolute;
-  top: -210px;
-  right: 126px;
-}
-.sec3 .eyes5 .eye7-bg {
-  position: absolute;
-  top: -209px;
-  right: 288px;
-}
-.sec3 .eyes5 .eye7-veins {
-  position: absolute;
-  top: -207px;
-  right: 292px;
-}
-.sec3 .eyes5 .eye7-pupil-orange {
-  position: absolute;
-  top: -198px;
-  right: 315px;
-}
-.sec3 .eyes5 .eye7-pupil-black {
-  position: absolute;
-  top: -192px;
-  right: 325px;
-}
-.sec3 .eyes5 .eye7-pupil {
-  position: absolute;
-  top: -187px;
-  right: 334px;
-}
 .sec4 {
-  margin-top: 78px;
+  margin-top: 51px;
 }
 .sec4 .marquee-horizontal {
   height: 114px;
@@ -483,12 +497,18 @@ button {
 .sec4 .marquee-text {
   margin-right: 8vw;
   flex: 0 0 auto;
+  text-transform: uppercase;
   font-weight: 800;
   font-size: 97px;
-  text-transform: uppercase;
+  line-height: 116px;
+}
+.sec4 .marquee-text .bg-txt {
+  background: url(../img/bg-txt.png) no-repeat center / cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(81, 155, 254, 0.5);
 }
 .sec4-main {
-  margin-top: 32px;
+  margin-top: 48px;
   display: flex;
   justify-content: space-between;
 }
@@ -496,12 +516,15 @@ button {
   position: relative;
   max-width: 350px;
 }
+.sec4 .man .zoom-photo {
+  margin: 87px 0 0 108px;
+}
 .sec4 .man .round-text {
-  width: 380px;
-  height: 380px;
+  width: 325px;
+  height: 325px;
   position: absolute;
-  left: 65px;
-  top: 25px;
+  left: 93px;
+  top: -33px;
   animation: rotate 40s linear infinite;
 }
 @keyframes rotate {
@@ -513,14 +536,14 @@ button {
   }
 }
 .sec4 .man svg text {
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
-  letter-spacing: -2.1px;
+  letter-spacing: -2.8px;
 }
 .sec4 .man-photo {
   width: 232px;
   height: 232px;
-  margin: 97px 0px 0px 140px;
+  margin: 29px 0px 0px 159px;
   position: relative;
 }
 .sec4 .man-photo:hover .man-eye-closed {
@@ -534,26 +557,58 @@ button {
 }
 .sec4 .txt {
   max-width: 950px;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 47px;
 }
 .sec4 .txt .t1 {
-  padding: 0px 170px 25px 45px;
+  padding: 0px 135px 25px 58px;
+}
+.sec4 .txt .t1 .tt1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.sec4 .txt .t1 .tt2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 47px;
+  margin-top: 12px;
 }
 .sec4 .txt .t2 {
-  padding: 23px 160px 40px 45px;
-  background: #fff6d9;
+  position: relative;
+  padding: 40px 140px 60px 58px;
+  margin-top: 70px;
+  background: #b4a0ff;
+  background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
+  border-radius: 20px 0px 0px 20px;
+}
+.sec4 .txt .t2 .tt1 {
+  font-weight: 700;
+  font-size: 40px;
+}
+.sec4 .txt .t2 .tt2 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 47px;
+  margin-top: 12px;
+}
+.sec4 .txt .t2::after {
+  position: absolute;
+  content: "";
+  width: 101%;
+  height: 98%;
+  bottom: 14px;
+  right: 0px;
+  border: 3px solid #000000;
+  border-right: none;
   border-radius: 20px 0px 0px 20px;
 }
 .sec5 {
-  margin-top: 259px;
+  margin-top: 141px;
   position: relative;
 }
-.sec5_wrapper {
+.sec5-wrapper {
   position: relative;
+  border-radius: 27px 188px 20px 0px;
 }
-.sec5_wrapper::before {
+.sec5-wrapper::before {
   position: absolute;
   content: "";
   width: 646px;
@@ -564,42 +619,39 @@ button {
   background-position: -43px 0px;
   background-repeat: no-repeat;
 }
-.sec5_wrapper::after {
+.sec5-wrapper::after {
   position: absolute;
   content: url(../img/arrow3.svg);
-  top: -238px;
-  left: 716px;
+  top: -132px;
+  right: 576px;
 }
 .sec5_inner {
   position: relative;
-  background: #efcb52;
-  border-radius: 20px 20px 0px 0px;
-  width: 380px;
   margin: 0 auto;
   text-align: center;
-  padding: 21px 0px 60px 0px;
+  padding: 50px 0px 60px 0px;
 }
 .sec5_inner .t1 {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
 }
-.sec5_inner .logo {
-  margin-top: 163px;
+.sec5_inner .sec5-logo {
+  margin-top: 172px;
 }
 .sec5_inner .register_btn {
   position: absolute;
-  top: -3px;
-  left: 425px;
+  top: -6px;
+  right: 273px;
 }
 .sec5_inner .schedule_eye {
   position: absolute;
-  top: 140px;
-  left: 100px;
+  top: 159px;
+  left: 636px;
 }
 .sec5_inner .schedule_eye svg {
-  width: 173px;
-  height: 90px;
+  width: 181px;
+  height: 93px;
 }
 .sec5_inner .schedule_eye-open .eye-slide_up {
   transform: translateY(-30px);
@@ -620,7 +672,7 @@ button {
 .sec5 .eyes6 {
   position: absolute;
   top: 0px;
-  left: 233px;
+  left: 0px;
 }
 .sec5 .eyes6 .eyes6-wrapper {
   position: relative;
@@ -682,8 +734,8 @@ button {
 }
 .sec5 .eyes7 {
   position: absolute;
-  bottom: 507px;
-  right: 231px;
+  bottom: 630px;
+  right: 1px;
 }
 .sec5 .eyes7 .eyes7-wrapper {
   position: relative;

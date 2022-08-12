@@ -90,7 +90,7 @@ function eyeMove() {
     }
 
     for (let i = 0; i < pupils.length; i++) {
-        pupilsDisplacementX[i] = (x - 500) * coefX[i]
+        pupilsDisplacementX[i] = (x - 400) * coefX[i]
         pupilsDisplacementY[i] = y * coefY[i]
         eyeBg[i].style.transform = "translate(" + pupilsDisplacementX[i] + "px," + pupilsDisplacementY[i] + "px  )";
         pupils[i].style.transform = "translate(" + (1.3 * pupilsDisplacementX[i]) + "px," + (1.3 * pupilsDisplacementY[i]) + "px  )";
@@ -142,21 +142,11 @@ document.getElementById("register_btn2").onmouseout = function () {
 
 function openTab(evt, tabid) {
     // Declare all variables
-    let i, tabcontent, tablinks;
-
-    // Get all elements with class="tabcontent" and hide them
-    tabcontent = document.querySelectorAll(".tab")
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-
+    let i, tablinks;
     // Get all elements with class="tablinks" and remove the class "active"
     tablinks = document.querySelectorAll(".tabs-item")
     for (i = 0; i < tablinks.length; i++) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
     }
-
-    // Show the current tab, and add an "active" class to the button that opened the tab
-    document.getElementById(tabid).style.display = "block";
     evt.currentTarget.className += " active";
 }
