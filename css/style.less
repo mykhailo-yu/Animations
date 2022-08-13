@@ -21,6 +21,23 @@
 .anim {
   transition: all ease 0.2s;
 }
+@keyframes move {
+  0% {
+    transform: translateX(initial);
+  }
+  25% {
+    transform: translateX(-7px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(7px);
+  }
+  100% {
+    transform: translateX(initial);
+  }
+}
 body {
   width: 100%;
   font-family: "TT Norms Pro";
@@ -144,6 +161,12 @@ button {
   border: 3px solid #000000;
   border-radius: 20px;
   padding: 41px 400px 32px 25px;
+  .logo1-text-eye {
+    position: absolute;
+    top: 40px;
+    left: 160px;
+    animation: move 0.8s linear;
+  }
   .logo_eye {
     position: absolute;
     top: 30px;
@@ -154,6 +177,9 @@ button {
     .anim;
   }
   &:hover {
+    .logo1-text-eye circle {
+      animation: move 0.8s linear;
+    }
     .eye-slide_up {
       transform: translateY(-30px);
     }
@@ -244,12 +270,12 @@ button {
     position: absolute;
     bottom: -11px;
     // left: 234px;
-    left: 23vw;
+    left: 47.5vw;
     z-index: 99;
     .eye4-bg {
       position: absolute;
       top: -12px;
-      left: 480px;
+      left: 0px;
     }
     .eyes4-wrapper {
       position: relative;
@@ -257,22 +283,22 @@ button {
     .eye4-veins {
       position: absolute;
       top: -12px;
-      left: 480px;
+      left: 0px;
     }
     .eye4-pupil-orange {
       position: absolute;
       top: 0px;
-      left: 499px;
+      left: 15px;
     }
     .eye4-pupil-black {
       position: absolute;
       top: 12px;
-      left: 512px;
+      left: 30px;
     }
     .eye4-pupil {
       position: absolute;
       top: 15px;
-      left: 520px;
+      left: 35px;
     }
   }
   .eyes5 {
@@ -486,6 +512,7 @@ button {
     list-style-type: none;
     font-weight: 700;
     font-size: 30px;
+    // font-size: calc(25px + (40 + 40 * 0.7) * (25vw - 320px) / 1170);
     color: #dbdbdb;
     .active {
       color: #000000;
@@ -541,6 +568,35 @@ button {
     position: relative;
     max-width: 350px;
     padding-left: 10vw;
+    .maneye {
+      position: absolute;
+      width: 17px;
+      .pupil_big,
+      .pupil {
+        display: none;
+      }
+    }
+    .maneye1 {
+      top: 80px;
+      left: 80px;
+      &-pupil {
+        position: absolute;
+        top: 8px;
+        left: 3px;
+      }
+    }
+    .maneye2 {
+      top: 0px;
+      left: 0px;
+      top: 76px;
+      left: 118px;
+      transform: rotate(-9deg);
+      &-pupil {
+        position: absolute;
+        top: 7px;
+        left: 4px;
+      }
+    }
     .zoom-photo {
       margin: 87px 0 0 108px;
     }
@@ -577,13 +633,16 @@ button {
         .man-eye-closed {
           visibility: visible;
         }
+        .maneye2 {
+          visibility: hidden;
+        }
       }
       .man-eye-closed {
         visibility: hidden;
 
         position: absolute;
-        top: 81px;
-        right: 79px;
+        top: 0px;
+        right: 34px;
       }
     }
   }
@@ -677,6 +736,18 @@ button {
     }
     .sec5-logo {
       margin-top: 172px;
+      position: relative;
+      .bottom-logo-eye {
+        position: absolute;
+        top: 56px;
+        left: 133px;
+        animation: move 0.8s linear;
+      }
+      &:hover .bottom-logo-eye {
+        circle {
+          animation: move 0.8s linear;
+        }
+      }
     }
     .register_btn {
       position: absolute;
@@ -734,12 +805,12 @@ button {
     }
     .eye8-pupil-orange {
       position: absolute;
-      top: -38px;
+      top: -45px;
       left: 75px;
     }
     .eye8-pupil-black {
       position: absolute;
-      top: -22px;
+      top: -29px;
       left: 96px;
     }
     .eye8-pupil {
