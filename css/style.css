@@ -109,7 +109,7 @@ button {
   top: 135px;
   left: 80px;
 }
-.eyes1 .eye1pupil-black {
+.eyes1 .eye1-pupil-black {
   position: absolute;
   top: 150px;
   left: 100px;
@@ -129,7 +129,7 @@ button {
   top: 290px;
   left: 380px;
 }
-.eyes1 .eye2pupil-black {
+.eyes1 .eye2-pupil-black {
   position: absolute;
   top: 302px;
   left: 398px;
@@ -915,10 +915,13 @@ button {
 .eye_bg,
 .pupil_big,
 .pupil {
-  transition: transform 1.5s ease-out, scale 0.5s linear;
+  transition: transform 1.5s ease-out;
+}
+.pupil_bigS {
+  transition: transform 0.5s linear;
 }
 .scalle {
-  scale: 1.1;
+  transform: scale(1.1);
 }
 .custom-cursor-container {
   opacity: 0;

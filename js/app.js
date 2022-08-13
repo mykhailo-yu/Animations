@@ -38,6 +38,7 @@ schedule.onmouseout = () => {
 let eyeBg = document.querySelectorAll('.eye_bg')
 let pupils = document.querySelectorAll('.pupil_big');
 let pupils1 = document.querySelectorAll('.pupil');
+let pupilsS = document.querySelectorAll('.pupil_bigS');
 let eyeBgWidth = [];
 let eyeBgHeight = [];
 let pupilsWidth = [];
@@ -56,14 +57,11 @@ let veinsPseudo = document.querySelectorAll('.veins-pseudo')
 let veins = document.querySelectorAll('.veins')
 let x, y
 let isVein = false
-let isButton = false
 setTimeout(
     document.onmousemove = (event) => {
         x = event.clientX
         y = event.clientY
-        if (isButton === false) {
-            eyeMove()
-        }
+        eyeMove()
         if (isVein === true) {
             cursorMove()
         }
@@ -123,15 +121,13 @@ function cursorMove() {
 function mouseOnBtn() {
     for (let i = 0; i < pupils.length; i++) {
         // pupils[i].style.scale = '1.1'
-        pupils[i].className += " scalle"
-        isButton = true;
+        pupilsS[i].className += " scalle"
     }
 }
 function mouseOutBtn() {
     for (let i = 0; i < pupils.length; i++) {
         // pupils[i].style.scale = '1'
-        pupils[i].className = pupils[i].className.replace(" scalle", "");
-        isButton = false;
+        pupilsS[i].className = pupilsS[i].className.replace(" scalle", "");
     }
 }
 document.getElementById("register_btn1").onmouseenter = function () {
