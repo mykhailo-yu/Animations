@@ -31,7 +31,6 @@
   }
 }
 body {
-  width: 100%;
   font-family: "TT Norms Pro";
   color: #000000;
   overflow-x: hidden;
@@ -544,6 +543,9 @@ button {
   max-width: 350px;
   padding-left: 10vw;
 }
+.sec4 .man .veins {
+  padding: 3px 0;
+}
 .sec4 .man .maneye {
   position: absolute;
   width: 17px;
@@ -553,25 +555,23 @@ button {
   display: none;
 }
 .sec4 .man .maneye1 {
-  top: 80px;
+  top: 83px;
   left: 80px;
 }
 .sec4 .man .maneye1-pupil {
   position: absolute;
-  top: 8px;
-  left: 3px;
+  top: 4px;
+  left: 5px;
 }
 .sec4 .man .maneye2 {
-  top: 0px;
-  left: 0px;
-  top: 76px;
+  top: 79px;
   left: 118px;
   transform: rotate(-9deg);
 }
 .sec4 .man .maneye2-pupil {
   position: absolute;
-  top: 7px;
-  left: 4px;
+  top: 3px;
+  left: 6px;
 }
 .sec4 .man .zoom-photo {
   margin: 87px 0 0 108px;
@@ -745,6 +745,39 @@ button {
 .sec5_inner:hover .eye-slide_down {
   transform: translateY(30px);
 }
+.sec5 .eye10 {
+  position: absolute;
+  top: 176px;
+  left: 453px;
+}
+.sec5 .eye10 .eye10-wraper {
+  position: relative;
+}
+.sec5 .eye10 .eye10-bg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.sec5 .eye10 .eye10-veins {
+  position: absolute;
+  top: 5px;
+  right: 9px;
+}
+.sec5 .eye10 .eye10-pupil-orange {
+  position: absolute;
+  top: 14px;
+  right: 28px;
+}
+.sec5 .eye10 .eye10-pupil-black {
+  position: absolute;
+  top: 20px;
+  right: 39px;
+}
+.sec5 .eye10 .eye10-pupil {
+  position: absolute;
+  top: 23px;
+  right: 44px;
+}
 .sec5 .eyes6 {
   position: absolute;
   top: 0px;
@@ -816,31 +849,6 @@ button {
 .sec5 .eyes7 .eyes7-wrapper {
   position: relative;
 }
-.sec5 .eyes7 .eye10-bg {
-  position: absolute;
-  top: -13px;
-  right: 411px;
-}
-.sec5 .eyes7 .eye10-veins {
-  position: absolute;
-  top: -8px;
-  right: 419px;
-}
-.sec5 .eyes7 .eye10-pupil-orange {
-  position: absolute;
-  top: 1px;
-  right: 442px;
-}
-.sec5 .eyes7 .eye10-pupil-black {
-  position: absolute;
-  top: 8px;
-  right: 453px;
-}
-.sec5 .eyes7 .eye10-pupil {
-  position: absolute;
-  top: 9px;
-  right: 458px;
-}
 .sec5 .eyes7 .eye11-bg {
   position: absolute;
   top: -74px;
@@ -907,6 +915,9 @@ button {
 .pupil {
   transition: transform 1.5s ease-out, scale 0.5s linear;
 }
+.scalle {
+  scale: 1.1;
+}
 .custom-cursor-container {
   opacity: 0;
   transition: opacity 0.6s ease;
@@ -928,4 +939,107 @@ button {
   backface-visibility: hidden;
   will-change: transform;
   background: url(../img/eye_irritant.png) no-repeat 0 0;
+}
+@media (min-width: 428px) and (max-width: 1140px) {
+  .eyes1,
+  .eyes3,
+  .eyes4,
+  .eyes5,
+  .eyes6,
+  .eyes7 {
+    display: none;
+  }
+  .header_inner {
+    flex-direction: column;
+    padding: 31px 46px 0px 46px;
+    gap: 13px;
+  }
+  .logo {
+    position: relative;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    padding: 8px 87px 5px 21px;
+  }
+  .logo img {
+    width: 225px;
+  }
+  .logo .logo_eye {
+    top: -6px;
+    right: 27px;
+  }
+  .logo .logo_eye svg {
+    width: 33px;
+  }
+  .logo .logo1-text-eye {
+    top: 6px;
+    left: 122px;
+  }
+  .schedule {
+    display: inline-flex;
+    gap: 21px;
+    padding: 0px;
+    font-weight: 1000;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .dot img {
+    top: -10px;
+    left: 10px;
+    width: 16px;
+  }
+  .sec2-wrapper {
+    border-radius: 0px 0px 0px 188px;
+  }
+  .sec2_inner {
+    padding-top: 29px;
+    padding-bottom: 372px;
+  }
+  .sec2_inner::after {
+    content: url(../img/arrow2-mobile.svg);
+    top: 340px;
+    left: 15vw;
+  }
+  .sec2 .marquee-horizontal {
+    height: 72px;
+  }
+  .sec2 .marquee-text {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .sec2 .dryeye img {
+    height: 44px;
+  }
+  .sec2 .t2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 8px 40px 0px 48px;
+    text-align: left;
+  }
+  .sec2 .register_btn {
+    margin: 45px 0 0 0px;
+  }
+  .sec3 {
+    margin-top: 206px;
+  }
+  .sec3 .t1 {
+    padding-left: 50px;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .sec3 .t2 {
+    padding: 28px 54px 29px 20px;
+  }
+  .sec3 .t2 .tt1 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .sec3 .t2 .tt2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+  }
 }

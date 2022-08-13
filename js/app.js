@@ -119,12 +119,14 @@ function cursorMove() {
 }
 function mouseOnBtn() {
     for (let i = 0; i < pupils.length; i++) {
-        pupils[i].style.scale = '1.1'
+        // pupils[i].style.scale = '1.1'
+        pupils[i].className += " scalle"
     }
 }
 function mouseOutBtn() {
     for (let i = 0; i < pupils.length; i++) {
-        pupils[i].style.scale = '1'
+        // pupils[i].style.scale = '1'
+        pupils[i].className = pupils[i].className.replace(" scalle", "");
     }
 }
 document.getElementById("register_btn1").onmouseenter = function () {

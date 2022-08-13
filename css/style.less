@@ -39,7 +39,6 @@
   }
 }
 body {
-  width: 100%;
   font-family: "TT Norms Pro";
   color: #000000;
   overflow-x: hidden;
@@ -568,6 +567,9 @@ button {
     position: relative;
     max-width: 350px;
     padding-left: 10vw;
+    .veins {
+      padding: 3px 0;
+    }
     .maneye {
       position: absolute;
       width: 17px;
@@ -577,24 +579,22 @@ button {
       }
     }
     .maneye1 {
-      top: 80px;
+      top: 83px;
       left: 80px;
       &-pupil {
         position: absolute;
-        top: 8px;
-        left: 3px;
+        top: 4px;
+        left: 5px;
       }
     }
     .maneye2 {
-      top: 0px;
-      left: 0px;
-      top: 76px;
+      top: 79px;
       left: 118px;
       transform: rotate(-9deg);
       &-pupil {
         position: absolute;
-        top: 7px;
-        left: 4px;
+        top: 3px;
+        left: 6px;
       }
     }
     .zoom-photo {
@@ -785,6 +785,40 @@ button {
       }
     }
   }
+  .eye10 {
+    position: absolute;
+    top: 176px;
+    left: 453px;
+    .eye10-wraper {
+      position: relative;
+    }
+    .eye10-bg {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    .eye10-veins {
+      position: absolute;
+      top: 5px;
+      right: 9px;
+    }
+    .eye10-pupil-orange {
+      position: absolute;
+      top: 14px;
+      right: 28px;
+    }
+    .eye10-pupil-black {
+      position: absolute;
+      top: 20px;
+      right: 39px;
+    }
+    .eye10-pupil {
+      position: absolute;
+      top: 23px;
+      right: 44px;
+    }
+  }
   .eyes6 {
     position: absolute;
     top: 0px;
@@ -856,32 +890,6 @@ button {
     right: 0px;
     .eyes7-wrapper {
       position: relative;
-    }
-    .eye10-bg {
-      position: absolute;
-      top: -13px;
-      right: 411px;
-    }
-
-    .eye10-veins {
-      position: absolute;
-      top: -8px;
-      right: 419px;
-    }
-    .eye10-pupil-orange {
-      position: absolute;
-      top: 1px;
-      right: 442px;
-    }
-    .eye10-pupil-black {
-      position: absolute;
-      top: 8px;
-      right: 453px;
-    }
-    .eye10-pupil {
-      position: absolute;
-      top: 9px;
-      right: 458px;
     }
     .eye11-bg {
       position: absolute;
@@ -956,6 +964,9 @@ button {
   transition: transform 1.5s ease-out, scale 0.5s linear;
   // transition: transform 2s linear;
 }
+.scalle {
+  scale: 1.1;
+}
 
 .custom-cursor-container {
   opacity: 0;
@@ -977,5 +988,114 @@ button {
     backface-visibility: hidden;
     will-change: transform;
     background: url(../img/eye_irritant.png) no-repeat 0 0;
+  }
+}
+
+@media (min-width: 428px) and (max-width: 1140px) {
+  .eyes1,
+  .eyes3,
+  .eyes4,
+  .eyes5,
+  .eyes6,
+  .eyes7 {
+    display: none;
+  }
+  .header_inner {
+    flex-direction: column;
+    padding: 31px 46px 0px 46px;
+    gap: 13px;
+  }
+  .logo {
+    position: relative;
+    border: 3px solid #000000;
+    border-radius: 20px;
+    padding: 8px 87px 5px 21px;
+    img {
+      width: 225px;
+    }
+    .logo_eye {
+      top: -6px;
+      right: 27px;
+      svg {
+        width: 33px;
+      }
+    }
+    .logo1-text-eye {
+      top: 6px;
+      left: 122px;
+    }
+  }
+
+  .schedule {
+    display: inline-flex;
+    gap: 21px;
+    padding: 0px;
+    font-weight: 1000;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .dot img {
+    top: -10px;
+    left: 10px;
+    width: 16px;
+  }
+  .sec2 {
+    &-wrapper {
+      border-radius: 0px 0px 0px 188px;
+    }
+    &_inner {
+      padding-top: 29px;
+      padding-bottom: 372px;
+
+      &::after {
+        content: url(../img/arrow2-mobile.svg);
+
+        top: 340px;
+        left: 15vw;
+      }
+    }
+    .marquee-horizontal {
+      height: 72px;
+    }
+    .marquee-text {
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 72px;
+    }
+    .dryeye img {
+      height: 44px;
+    }
+    .t2 {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      padding: 8px 40px 0px 48px;
+      text-align: left;
+    }
+    .register_btn {
+      margin: 45px 0 0 0px;
+    }
+  }
+  .sec3 {
+    margin-top: 206px;
+    .t1 {
+      padding-left: 50px;
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 72px;
+    }
+    .t2 {
+      padding: 28px 54px 29px 20px;
+      .tt1 {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+      }
+      .tt2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+      }
+    }
   }
 }
