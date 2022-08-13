@@ -56,11 +56,14 @@ let veinsPseudo = document.querySelectorAll('.veins-pseudo')
 let veins = document.querySelectorAll('.veins')
 let x, y
 let isVein = false
+let isButton = false
 setTimeout(
     document.onmousemove = (event) => {
         x = event.clientX
         y = event.clientY
-        eyeMove()
+        if (isButton === false) {
+            eyeMove()
+        }
         if (isVein === true) {
             cursorMove()
         }
@@ -121,12 +124,14 @@ function mouseOnBtn() {
     for (let i = 0; i < pupils.length; i++) {
         // pupils[i].style.scale = '1.1'
         pupils[i].className += " scalle"
+        isButton = true;
     }
 }
 function mouseOutBtn() {
     for (let i = 0; i < pupils.length; i++) {
         // pupils[i].style.scale = '1'
         pupils[i].className = pupils[i].className.replace(" scalle", "");
+        isButton = false;
     }
 }
 document.getElementById("register_btn1").onmouseenter = function () {
