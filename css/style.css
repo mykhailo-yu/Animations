@@ -155,7 +155,6 @@ button {
   position: absolute;
   top: 40px;
   left: 160px;
-  animation: move 0.8s linear;
 }
 .logo .logo_eye {
   position: absolute;
@@ -712,7 +711,6 @@ button {
   position: absolute;
   top: 56px;
   left: 133px;
-  animation: move 0.8s linear;
 }
 .sec5_inner .sec5-logo:hover .bottom-logo-eye circle {
   animation: move 0.8s linear;
