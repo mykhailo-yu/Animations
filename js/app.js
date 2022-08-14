@@ -56,28 +56,40 @@ let pupilsY = []
 let pupilsYM = []
 let clientWidth = document.documentElement.clientWidth
 let clientHeight = document.documentElement.clientHeight
+let pageHeight = document.documentElement.offsetHeight
 let coefX = [], coefY = [], coefYM = []
 let pupilsDisplacementX = [], pupilsDisplacementY = [], pupilsDisplacementYM = []
 let cursorContainer = document.querySelector('.custom-cursor-container')
 let cursor = document.getElementById('cursor')
 let veinsPseudo = document.querySelectorAll('.veins-pseudo')
 let veins = document.querySelectorAll('.veins')
-let veinsM = document.querySelectorAll('.veins')
-let x, y, yM = clientHeight / 2
+let veinsM = document.querySelectorAll('.veinsM')
+let x, y, yM
 let isVein = false
-setTimeout(
-    document.onmousemove = (event) => {
-        x = event.clientX
-        y = event.clientY
-        eyeMove()
-        if (isVein === true) {
-            cursorMove()
-        }
-    }, 2000);
-window.onscroll = () => {
-    eyeMoveMobile();
-    console.log('ttt')
-}
+
+if (clientWidth < 1140) {
+    window.onscroll = (event) => {
+        eyeMoveMobile();
+        let top = window.pageYOffset || document.documentElement.scrollTop
+        console.log(top)
+        yM = top / 2;
+        // if (top > 2000) {
+        //     yM = (top - 2000) / 2
+        // } else {
+        //     yM = top / 2;
+        // };
+    };
+} else[
+    setTimeout(
+        document.onmousemove = (event) => {
+            x = event.clientX
+            y = event.clientY
+            eyeMove()
+            if (isVein === true) {
+                cursorMove()
+            }
+        }, 2000)
+]
 function eyeMove() {
     for (let i = 0; i < eyeBg.length; i++) {
         eyeBgWidth[i] = Math.round(veins[i].getBoundingClientRect().width)
@@ -119,17 +131,32 @@ function eyeMoveMobile() {
     }
     for (let i = 0; i < eyeBgM.length; i++) {
         lengthDifferenceHeightM[i] = eyeBgHeightM[i] - pupilsHeightM[i]
-        lengthDifferenceHeightM[i] = lengthDifferenceHeightM[i] - lengthDifferenceHeightM[i] / 2
+        lengthDifferenceHeightM[1] *= 1.2
+        lengthDifferenceHeightM[2] /= 1.1
+        lengthDifferenceHeightM[3] /= 1.1
+        // lengthDifferenceHeightM[4] /= 1.1
+        // lengthDifferenceHeightM[5] *= 1.2
+        // lengthDifferenceHeightM[6] *= 1.15
+        // lengthDifferenceHeightM[7] *= 1.15
+        // lengthDifferenceHeightM[8] *= 1.1
+        lengthDifferenceHeightM[9] /= 2
+        lengthDifferenceHeightM[10] /= 2
+        lengthDifferenceHeightM[11] /= 1.1
+        lengthDifferenceHeightM[12] /= 1.1
+        lengthDifferenceHeightM[13] /= 2
     }
     for (let i = 0; i < pupilsM.length; i++) {
-        pupilsYM[i] = Math.round(pupils[i].getBoundingClientRect().top) + Math.round(pupilsHeight[i] / 2)
+        pupilsYM[i] = Math.round(pupilsM[i].getBoundingClientRect().top) + Math.round(pupilsHeightM[i] / 2)
     }
     for (let i = 0; i < pupilsM.length; i++) {
-        coefYM[i] = lengthDifferenceHeight[i] / clientHeight
+        coefYM[i] = lengthDifferenceHeightM[i] / pageHeight
     }
 
     for (let i = 0; i < pupilsM.length; i++) {
         pupilsDisplacementYM[i] = yM * coefYM[i]
+        if (pupilsDisplacementYM[i] > lengthDifferenceHeightM[i]) {
+            pupilsDisplacementYM[i] = lengthDifferenceHeightM[i]
+        }
         eyeBgM[i].style.transform = "translateY(" + pupilsDisplacementYM[i] + "px  )";
         pupilsM[i].style.transform = "translateY(" + (1.3 * pupilsDisplacementYM[i]) + "px  )";
         pupils1M[i].style.transform = "translateY(" + (1.5 * pupilsDisplacementYM[i]) + "px  )";
