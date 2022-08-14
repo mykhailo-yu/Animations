@@ -1050,6 +1050,7 @@ button {
     content: url(../img/exclamation_mark_mobile.svg);
     width: 32px;
     height: 32px;
+    right: -22px;
   }
   .sec3 .t2 .schedule_eye {
     top: 120px;
