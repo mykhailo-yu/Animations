@@ -74,6 +74,7 @@ button {
 .header-wrapper,
 .sec2-wrapper,
 .sec5-wrapper {
+  position: relative;
   background: #b4a0ff;
   background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
 }
@@ -972,7 +973,8 @@ button {
   .eyes4,
   .eyes5,
   .eyes6,
-  .eyes7 {
+  .eyes7,
+  .eye10 {
     display: none;
   }
   .header_inner {
@@ -1023,7 +1025,7 @@ button {
   .sec2_inner::after {
     content: url(../img/arrow2-mobile.svg);
     top: 340px;
-    left: 15vw;
+    left: calc(50% - 142px);
   }
   .sec2 .marquee-horizontal {
     height: 72px;
@@ -1199,6 +1201,9 @@ button {
     font-size: 20px;
     line-height: 31px;
   }
+  .sec5 {
+    margin-top: 30px;
+  }
   .sec5-wrapper {
     border-radius: 0px 188px 0px 0px;
   }
@@ -1218,11 +1223,11 @@ button {
     content: url(../img/arrow4-mobile.svg);
   }
   .sec5_inner .sec5-logo {
-    margin-top: 540px;
+    margin-top: 442px;
     text-align: center;
   }
   .sec5_inner .schedule_eye {
-    top: 620px;
+    top: 549px;
     left: 55px;
   }
   .sec5 .eye10 {
@@ -1250,7 +1255,7 @@ button {
   }
   .eye1-mobile {
     top: -4px;
-    left: 166px;
+    left: 49%;
   }
   .eye1-mobile .eye1-wrapper {
     position: relative;
@@ -1281,8 +1286,8 @@ button {
     left: 11px;
   }
   .eye2-mobile {
-    top: 0px;
-    left: 0px;
+    top: 182px;
+    right: 26%;
   }
   .eye2-mobile .eye2-wrapper {
     position: relative;
@@ -1313,7 +1318,7 @@ button {
     left: 45px;
   }
   .eye3-mobile {
-    top: 0px;
+    top: 283px;
     left: 0px;
   }
   .eye3-mobile .eye3-wrapper {
@@ -1368,10 +1373,11 @@ button {
     position: absolute;
     top: 172px;
     left: 0px;
+    z-index: 1;
   }
   .eye5-mobile {
-    top: 0px;
-    right: 243px;
+    top: 231px;
+    right: 244px;
   }
   .eye5-mobile .eye5-wrapper {
     position: relative;
@@ -1402,8 +1408,8 @@ button {
     left: 140px;
   }
   .eye6-mobile {
-    top: 0px;
-    left: 0px;
+    top: 570px;
+    left: 28%;
   }
   .eye6-mobile .eye6-wrapper {
     position: relative;
@@ -1434,8 +1440,8 @@ button {
     left: 33px;
   }
   .eye7-mobile {
-    top: 0px;
-    left: 0px;
+    bottom: 0px;
+    right: 40%;
   }
   .eye7-mobile .eye7-wrapper {
     position: relative;
@@ -1466,8 +1472,8 @@ button {
     left: 70px;
   }
   .eye8-mobile {
-    top: 0px;
-    left: 0px;
+    top: -93px;
+    right: 288px;
   }
   .eye8-mobile .eye8-wrapper {
     position: relative;
@@ -1479,27 +1485,32 @@ button {
   }
   .eye8-mobile .eye8-veins {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 36px;
+    left: 42px;
   }
   .eye8-mobile .eye8-pupil-orange {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 73px;
+    left: 79px;
   }
   .eye8-mobile .eye8-pupil-black {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 84px;
+    left: 90px;
   }
   .eye8-mobile .eye8-pupil {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 98px;
+    left: 113px;
+  }
+  .eye8-mobile .eye-line1 {
+    position: absolute;
+    top: 159px;
+    left: 36px;
   }
   .eye9-mobile {
-    top: 0px;
-    left: 0px;
+    top: -61px;
+    right: 148px;
   }
   .eye9-mobile .eye9-wrapper {
     position: relative;
@@ -1511,27 +1522,27 @@ button {
   }
   .eye9-mobile .eye9-veins {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 27px;
+    left: 35px;
   }
   .eye9-mobile .eye9-pupil-orange {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 56px;
+    left: 61px;
   }
   .eye9-mobile .eye9-pupil-black {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 63px;
+    left: 72px;
   }
   .eye9-mobile .eye9-pupil {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 74px;
+    left: 88px;
   }
   .eye10-mobile {
-    top: 0px;
-    left: 0px;
+    top: 107px;
+    right: 253px;
   }
   .eye10-mobile .eye10-wrapper {
     position: relative;
@@ -1562,8 +1573,8 @@ button {
     left: 22px;
   }
   .eye11-mobile {
-    top: 0px;
-    left: 0px;
+    top: 386px;
+    left: 35px;
   }
   .eye11-mobile .eye11-wrapper {
     position: relative;
@@ -1594,8 +1605,8 @@ button {
     left: 55px;
   }
   .eye12-mobile {
-    top: 0px;
-    left: 0px;
+    top: 406px;
+    left: 170px;
   }
   .eye12-mobile .eye12-wrapper {
     position: relative;

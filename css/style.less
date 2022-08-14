@@ -84,6 +84,7 @@ button {
 .header-wrapper,
 .sec2-wrapper,
 .sec5-wrapper {
+  position: relative;
   background: @background;
   background: @background-gradient;
 }
@@ -1029,7 +1030,8 @@ button {
   .eyes4,
   .eyes5,
   .eyes6,
-  .eyes7 {
+  .eyes7,
+  .eye10 {
     display: none;
   }
   // header,
@@ -1090,7 +1092,8 @@ button {
         content: url(../img/arrow2-mobile.svg);
 
         top: 340px;
-        left: 15vw;
+
+        left: calc(50% - 142px);
       }
     }
     .marquee-horizontal {
@@ -1271,6 +1274,7 @@ button {
     }
   }
   .sec5 {
+    margin-top: 30px;
     &-wrapper {
       border-radius: 0px 188px 0px 0px;
       &::before {
@@ -1289,11 +1293,11 @@ button {
         content: url(../img/arrow4-mobile.svg);
       }
       .sec5-logo {
-        margin-top: 540px;
+        margin-top: 442px;
         text-align: center;
       }
       .schedule_eye {
-        top: 620px;
+        top: 549px;
         left: 55px;
       }
     }
@@ -1325,7 +1329,7 @@ button {
   }
   .eye1-mobile {
     top: -4px;
-    left: 166px;
+    left: 49%;
     .eye1-wrapper {
       position: relative;
     }
@@ -1356,8 +1360,8 @@ button {
     }
   }
   .eye2-mobile {
-    top: 0px;
-    left: 0px;
+    top: 182px;
+    right: 26%;
     .eye2-wrapper {
       position: relative;
     }
@@ -1388,7 +1392,7 @@ button {
     }
   }
   .eye3-mobile {
-    top: 0px;
+    top: 283px;
     left: 0px;
     .eye3-wrapper {
       position: relative;
@@ -1442,12 +1446,13 @@ button {
       position: absolute;
       top: 172px;
       left: 0px;
+      z-index: 1;
     }
   }
 
   .eye5-mobile {
-    top: 0px;
-    right: 243px;
+    top: 231px;
+    right: 244px;
     .eye5-wrapper {
       position: relative;
     }
@@ -1478,8 +1483,8 @@ button {
     }
   }
   .eye6-mobile {
-    top: 0px;
-    left: 0px;
+    top: 570px;
+    left: 28%;
     .eye6-wrapper {
       position: relative;
     }
@@ -1510,8 +1515,8 @@ button {
     }
   }
   .eye7-mobile {
-    top: 0px;
-    left: 0px;
+    bottom: 0px;
+    right: 40%;
     .eye7-wrapper {
       position: relative;
     }
@@ -1542,8 +1547,8 @@ button {
     }
   }
   .eye8-mobile {
-    top: 0px;
-    left: 0px;
+    top: -93px;
+    right: 288px;
     .eye8-wrapper {
       position: relative;
     }
@@ -1554,28 +1559,33 @@ button {
     }
     .eye8-veins {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 36px;
+      left: 42px;
     }
     .eye8-pupil-orange {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 73px;
+      left: 79px;
     }
     .eye8-pupil-black {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 84px;
+      left: 90px;
     }
     .eye8-pupil {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 98px;
+      left: 113px;
+    }
+    .eye-line1 {
+      position: absolute;
+      top: 159px;
+      left: 36px;
     }
   }
   .eye9-mobile {
-    top: 0px;
-    left: 0px;
+    top: -61px;
+    right: 148px;
     .eye9-wrapper {
       position: relative;
     }
@@ -1586,28 +1596,28 @@ button {
     }
     .eye9-veins {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 27px;
+      left: 35px;
     }
     .eye9-pupil-orange {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 56px;
+      left: 61px;
     }
     .eye9-pupil-black {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 63px;
+      left: 72px;
     }
     .eye9-pupil {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 74px;
+      left: 88px;
     }
   }
   .eye10-mobile {
-    top: 0px;
-    left: 0px;
+    top: 107px;
+    right: 253px;
     .eye10-wrapper {
       position: relative;
     }
@@ -1638,8 +1648,8 @@ button {
     }
   }
   .eye11-mobile {
-    top: 0px;
-    left: 0px;
+    top: 386px;
+    left: 35px;
     .eye11-wrapper {
       position: relative;
     }
@@ -1670,8 +1680,8 @@ button {
     }
   }
   .eye12-mobile {
-    top: 0px;
-    left: 0px;
+    top: 406px;
+    left: 170px;
     .eye12-wrapper {
       position: relative;
     }
