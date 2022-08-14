@@ -421,15 +421,18 @@ button {
 .sec3 {
   margin-top: 64px;
   &_inner {
-    display: flex;
-    justify-content: space-between;
-    gap: 81px;
+    // display: flex;
+    // justify-content: space-between;
+    // gap: 81px;
     position: relative;
-    padding-right: 5%;
+    // padding-right: 5%;
   }
   .main_content {
     flex-shrink: 0;
     position: relative;
+    display: grid;
+    column-gap: 5%;
+    grid-template-columns: 54% 35%;
 
     .active {
       display: block;
@@ -445,6 +448,8 @@ button {
     line-height: 116px;
     text-transform: uppercase;
     margin-bottom: 43px;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
   .t2 {
     position: relative;
@@ -452,6 +457,8 @@ button {
     background: @background;
     background: @background-gradient;
     border-radius: 0px 20px 20px 0px;
+    grid-row-start: 2;
+    grid-row-end: 3;
     &::before {
       position: absolute;
       content: url(../img/exclamation_mark.svg);
@@ -513,6 +520,8 @@ button {
     font-size: 30px;
     // font-size: calc(25px + (40 + 40 * 0.7) * (25vw - 320px) / 1170);
     color: #dbdbdb;
+    grid-row-start: 1;
+    grid-row-end: 3;
     .active {
       color: #000000;
     }
@@ -1088,20 +1097,25 @@ button {
   .sec3 {
     margin-top: 77px;
     &_inner {
-      flex-direction: column;
-      justify-content: initial;
-      gap: 0;
+    }
+    .main_content {
+      grid-template-columns: 1fr;
     }
     .t1 {
       padding-left: 50px;
       font-weight: 800;
       font-size: 60px;
       line-height: 72px;
+      grid-row-start: 1;
+      grid-row-end: 1;
+      margin-bottom: 26px;
     }
     .t2 {
       padding: 28px 10px 37px 50px;
-      width: 94%;
-      top: 352px;
+      width: 89%;
+      grid-row-start: 3;
+      grid-row-end: 3;
+      margin-top: 39px;
       &::before {
         content: url(../img/exclamation_mark_mobile.svg);
         width: 32px;
@@ -1131,21 +1145,23 @@ button {
     .tabs {
       position: relative;
       margin-top: 0;
-      bottom: 215px;
       font-weight: 700;
       font-size: 20px;
       line-height: 24px;
       padding-left: 39px;
+      grid-row-start: 2;
+      grid-row-end: 2;
       .tabs-item {
         margin-bottom: 20px;
       }
     }
   }
   .sec4 {
-    margin-top: 33px;
+    margin-top: 9px;
     &-main {
       flex-direction: column;
       align-items: center;
+      margin-top: 8px;
     }
     .marquee-text {
       font-weight: 800;
@@ -1156,6 +1172,9 @@ button {
       order: 1;
       width: initial;
       padding: 0;
+      img {
+        width: 181px;
+      }
     }
     .t1 {
       order: 2;
@@ -1176,7 +1195,41 @@ button {
       order: 3;
       width: initial;
       &-photo {
-        margin: 90px 0px 0px 50px;
+        width: 144px;
+        height: 144px;
+        margin: 90px 0px 0px 0px;
+        .img {
+          width: 144px;
+        }
+      }
+      &-eye-closed {
+        width: 144px;
+        right: 0px !important;
+      }
+      .round-text {
+        width: 220px;
+        height: 220px;
+        left: -38px;
+        top: -39px;
+      }
+      .veins {
+        width: 12px;
+      }
+      .maneye1 {
+        top: 58px;
+        left: 56px;
+        &-pupil {
+          top: 5px;
+          width: 4px;
+        }
+      }
+      .maneye2 {
+        top: 54px;
+        left: 85px;
+        &-pupil {
+          top: 5px;
+          width: 4px;
+        }
       }
     }
     .t2 {

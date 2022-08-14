@@ -401,15 +401,14 @@ button {
   margin-top: 64px;
 }
 .sec3_inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 81px;
   position: relative;
-  padding-right: 5%;
 }
 .sec3 .main_content {
   flex-shrink: 0;
   position: relative;
+  display: grid;
+  column-gap: 5%;
+  grid-template-columns: 54% 35%;
 }
 .sec3 .main_content .active {
   display: block;
@@ -424,6 +423,8 @@ button {
   line-height: 116px;
   text-transform: uppercase;
   margin-bottom: 43px;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 .sec3 .t2 {
   position: relative;
@@ -431,6 +432,8 @@ button {
   background: #b4a0ff;
   background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
   border-radius: 0px 20px 20px 0px;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 .sec3 .t2::before {
   position: absolute;
@@ -489,6 +492,8 @@ button {
   font-weight: 700;
   font-size: 30px;
   color: #dbdbdb;
+  grid-row-start: 1;
+  grid-row-end: 3;
 }
 .sec3 .tabs .active {
   color: #000000;
@@ -1030,21 +1035,24 @@ button {
   .sec3 {
     margin-top: 77px;
   }
-  .sec3_inner {
-    flex-direction: column;
-    justify-content: initial;
-    gap: 0;
+  .sec3 .main_content {
+    grid-template-columns: 1fr;
   }
   .sec3 .t1 {
     padding-left: 50px;
     font-weight: 800;
     font-size: 60px;
     line-height: 72px;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin-bottom: 26px;
   }
   .sec3 .t2 {
     padding: 28px 10px 37px 50px;
-    width: 94%;
-    top: 352px;
+    width: 89%;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    margin-top: 39px;
   }
   .sec3 .t2::before {
     content: url(../img/exclamation_mark_mobile.svg);
@@ -1074,21 +1082,23 @@ button {
   .sec3 .tabs {
     position: relative;
     margin-top: 0;
-    bottom: 215px;
     font-weight: 700;
     font-size: 20px;
     line-height: 24px;
     padding-left: 39px;
+    grid-row-start: 2;
+    grid-row-end: 2;
   }
   .sec3 .tabs .tabs-item {
     margin-bottom: 20px;
   }
   .sec4 {
-    margin-top: 33px;
+    margin-top: 9px;
   }
   .sec4-main {
     flex-direction: column;
     align-items: center;
+    margin-top: 8px;
   }
   .sec4 .marquee-text {
     font-weight: 800;
@@ -1099,6 +1109,9 @@ button {
     order: 1;
     width: initial;
     padding: 0;
+  }
+  .sec4 .zoom-photo img {
+    width: 181px;
   }
   .sec4 .t1 {
     order: 2;
@@ -1120,7 +1133,41 @@ button {
     width: initial;
   }
   .sec4 .man-photo {
-    margin: 90px 0px 0px 50px;
+    width: 144px;
+    height: 144px;
+    margin: 90px 0px 0px 0px;
+  }
+  .sec4 .man-photo .img {
+    width: 144px;
+  }
+  .sec4 .man-eye-closed {
+    width: 144px;
+    right: 0px !important;
+  }
+  .sec4 .man .round-text {
+    width: 220px;
+    height: 220px;
+    left: -38px;
+    top: -39px;
+  }
+  .sec4 .man .veins {
+    width: 12px;
+  }
+  .sec4 .man .maneye1 {
+    top: 58px;
+    left: 56px;
+  }
+  .sec4 .man .maneye1-pupil {
+    top: 5px;
+    width: 4px;
+  }
+  .sec4 .man .maneye2 {
+    top: 54px;
+    left: 85px;
+  }
+  .sec4 .man .maneye2-pupil {
+    top: 5px;
+    width: 4px;
   }
   .sec4 .t2 {
     order: 4;
