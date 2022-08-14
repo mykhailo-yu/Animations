@@ -536,12 +536,14 @@ button {
   margin-top: 48px;
   display: flex;
   justify-content: space-between;
-  gap: 20%;
+  flex-wrap: wrap;
 }
 .sec4 .man {
   position: relative;
-  max-width: 350px;
-  padding-left: 10vw;
+  /* max-width: 350px; */
+  /* margin-left: 5vw; */
+  /* flex: 0 0 21%; */
+  width: 30%;
 }
 .sec4 .man .veins {
   padding: 3px 0;
@@ -574,9 +576,6 @@ button {
   top: 3px;
   left: 6px;
   transition: none;
-}
-.sec4 .man .zoom-photo {
-  margin: 87px 0 0 108px;
 }
 .sec4 .man .round-text {
   width: 325px;
@@ -617,41 +616,44 @@ button {
   top: 0px;
   right: 34px;
 }
-.sec4 .txt {
-  max-width: 950px;
+.sec4 .zoom-photo {
+  width: 30%;
+  padding: 76px 0 0 109px;
 }
-.sec4 .txt .t1 {
-  padding: 0px 135px 25px 58px;
+.sec4 .t1 {
+  width: 70%;
+  padding: 0px 8% 25px 8%;
 }
-.sec4 .txt .t1 .tt1 {
+.sec4 .t1 .tt1 {
   font-weight: 700;
   font-size: 40px;
 }
-.sec4 .txt .t1 .tt2 {
+.sec4 .t1 .tt2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 47px;
   margin-top: 12px;
 }
-.sec4 .txt .t2 {
+.sec4 .t2 {
   position: relative;
   padding: 40px 140px 60px 58px;
   margin-top: 70px;
   background: #b4a0ff;
   background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
   border-radius: 20px 0px 0px 20px;
+  width: 66%;
 }
-.sec4 .txt .t2 .tt1 {
+.sec4 .t2 .tt1 {
   font-weight: 700;
   font-size: 40px;
 }
-.sec4 .txt .t2 .tt2 {
+.sec4 .t2 .tt2 {
   font-weight: 400;
   font-size: 30px;
   line-height: 47px;
   margin-top: 12px;
 }
-.sec4 .txt .t2::after {
+.sec4 .t2::after {
   position: absolute;
   content: "";
   width: 101%;
@@ -945,7 +947,7 @@ button {
   will-change: transform;
   background: url(../img/eye_irritant.png) no-repeat 0 0;
 }
-@media (min-width: 428px) and (max-width: 1140px) {
+@media (min-width: 320px) and (max-width: 1140px) {
   .eyes1,
   .eyes3,
   .eyes4,
@@ -1026,7 +1028,12 @@ button {
     margin: 45px 0 0 0px;
   }
   .sec3 {
-    margin-top: 206px;
+    margin-top: 77px;
+  }
+  .sec3_inner {
+    flex-direction: column;
+    justify-content: initial;
+    gap: 0;
   }
   .sec3 .t1 {
     padding-left: 50px;
@@ -1035,7 +1042,21 @@ button {
     line-height: 72px;
   }
   .sec3 .t2 {
-    padding: 28px 54px 29px 20px;
+    padding: 28px 10px 37px 50px;
+    width: 94%;
+    top: 352px;
+  }
+  .sec3 .t2::before {
+    content: url(../img/exclamation_mark_mobile.svg);
+    width: 32px;
+    height: 32px;
+  }
+  .sec3 .t2 .schedule_eye {
+    top: 120px;
+    right: 22px;
+  }
+  .sec3 .t2 .schedule_eye svg {
+    width: 55px;
   }
   .sec3 .t2 .tt1 {
     font-weight: 700;
@@ -1043,8 +1064,111 @@ button {
     line-height: 30px;
   }
   .sec3 .t2 .tt2 {
+    max-width: none;
+    margin-top: 16px;
     font-weight: 400;
     font-size: 20px;
     line-height: 29px;
+  }
+  .sec3 .tabs {
+    position: relative;
+    margin-top: 0;
+    bottom: 215px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 39px;
+  }
+  .sec3 .tabs .tabs-item {
+    margin-bottom: 20px;
+  }
+  .sec4 {
+    margin-top: 33px;
+  }
+  .sec4-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .sec4 .marquee-text {
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .sec4 .zoom-photo {
+    order: 1;
+    width: initial;
+    padding: 0;
+  }
+  .sec4 .t1 {
+    order: 2;
+    margin: 40px 6% 0 8%;
+    padding: 0;
+  }
+  .sec4 .t1 .tt1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+  }
+  .sec4 .t1 .tt2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+  }
+  .sec4 .man {
+    order: 3;
+    width: initial;
+  }
+  .sec4 .man-photo {
+    margin: 90px 0px 0px 50px;
+  }
+  .sec4 .t2 {
+    order: 4;
+    width: initial;
+    margin: 70px 0 0 5%;
+    padding: 20px 40px 90px 25px;
+  }
+  .sec4 .t2 .tt1 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 47px;
+  }
+  .sec4 .t2 .tt2 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
+  }
+  .sec5-wrapper {
+    border-radius: 0px 188px 0px 0px;
+  }
+  .sec5-wrapper::before {
+    display: none;
+  }
+  .sec5_inner {
+    padding: 170px 0px 50px 0%;
+    text-align: initial;
+  }
+  .sec5_inner::after {
+    display: none;
+  }
+  .sec5_inner::before {
+    top: 380px;
+    left: -60px;
+    content: url(../img/arrow4-mobile.svg);
+  }
+  .sec5_inner .sec5-logo {
+    margin-top: 540px;
+    text-align: center;
+  }
+  .sec5_inner .schedule_eye {
+    top: 620px;
+    left: 55px;
+  }
+  .sec5 .eye10 {
+    top: 410px;
+    left: 150px;
+  }
+  .sec5 .register_btn {
+    top: 240px;
+    left: calc(50% - 150px);
   }
 }

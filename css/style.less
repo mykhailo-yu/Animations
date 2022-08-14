@@ -561,12 +561,15 @@ button {
     margin-top: 48px;
     display: flex;
     justify-content: space-between;
-    gap: 20%;
+    flex-wrap: wrap;
+    // gap: 20%;
   }
   .man {
     position: relative;
-    max-width: 350px;
-    padding-left: 10vw;
+    /* max-width: 350px; */
+    /* margin-left: 5vw; */
+    /* flex: 0 0 21%; */
+    width: 30%;
     .veins {
       padding: 3px 0;
     }
@@ -599,9 +602,7 @@ button {
         transition: none;
       }
     }
-    .zoom-photo {
-      margin: 87px 0 0 108px;
-    }
+
     .round-text {
       width: 325px;
       height: 325px;
@@ -648,50 +649,53 @@ button {
       }
     }
   }
-  .txt {
-    max-width: 950px;
-
-    .t1 {
-      .tt1 {
-        font-weight: 700;
-        font-size: 40px;
-      }
-      .tt2 {
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 47px;
-        margin-top: 12px;
-      }
-      padding: 0px 135px 25px 58px;
+  .zoom-photo {
+    width: 30%;
+    padding: 76px 0 0 109px;
+  }
+  .t1 {
+    width: 70%;
+    padding: 0px 8% 25px 8%;
+    .tt1 {
+      font-weight: 700;
+      font-size: 40px;
     }
-    .t2 {
-      .tt1 {
-        font-weight: 700;
-        font-size: 40px;
-      }
-      .tt2 {
-        font-weight: 400;
-        font-size: 30px;
-        line-height: 47px;
-        margin-top: 12px;
-      }
-      position: relative;
-      padding: 40px 140px 60px 58px;
-      margin-top: 70px;
-      background: @background;
-      background: @background-gradient;
+    .tt2 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 47px;
+      margin-top: 12px;
+    }
+  }
+  .t2 {
+    position: relative;
+    padding: 40px 140px 60px 58px;
+    margin-top: 70px;
+    background: #b4a0ff;
+    background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
+    border-radius: 20px 0px 0px 20px;
+    width: 66%;
+    .tt1 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+    .tt2 {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 47px;
+      margin-top: 12px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 101%;
+      height: 98%;
+      bottom: 14px;
+      right: 0px;
+      border: 3px solid #000000;
+      border-right: none;
       border-radius: 20px 0px 0px 20px;
-      &::after {
-        position: absolute;
-        content: "";
-        width: 101%;
-        height: 98%;
-        bottom: 14px;
-        right: 0px;
-        border: 3px solid #000000;
-        border-right: none;
-        border-radius: 20px 0px 0px 20px;
-      }
     }
   }
 }
@@ -996,7 +1000,7 @@ button {
   }
 }
 
-@media (min-width: 428px) and (max-width: 1140px) {
+@media (min-width: 320px) and (max-width: 1140px) {
   .eyes1,
   .eyes3,
   .eyes4,
@@ -1082,7 +1086,12 @@ button {
     }
   }
   .sec3 {
-    margin-top: 206px;
+    margin-top: 77px;
+    &_inner {
+      flex-direction: column;
+      justify-content: initial;
+      gap: 0;
+    }
     .t1 {
       padding-left: 50px;
       font-weight: 800;
@@ -1090,17 +1099,137 @@ button {
       line-height: 72px;
     }
     .t2 {
-      padding: 28px 54px 29px 20px;
+      padding: 28px 10px 37px 50px;
+      width: 94%;
+      top: 352px;
+      &::before {
+        content: url(../img/exclamation_mark_mobile.svg);
+        width: 32px;
+        height: 32px;
+      }
+      .schedule_eye {
+        top: 120px;
+        right: 22px;
+        svg {
+          width: 55px;
+        }
+      }
       .tt1 {
         font-weight: 700;
         font-size: 25px;
         line-height: 30px;
       }
       .tt2 {
+        max-width: none;
+        margin-top: 16px;
         font-weight: 400;
         font-size: 20px;
         line-height: 29px;
       }
+    }
+    .tabs {
+      position: relative;
+      margin-top: 0;
+      bottom: 215px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      padding-left: 39px;
+      .tabs-item {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .sec4 {
+    margin-top: 33px;
+    &-main {
+      flex-direction: column;
+      align-items: center;
+    }
+    .marquee-text {
+      font-weight: 800;
+      font-size: 60px;
+      line-height: 72px;
+    }
+    .zoom-photo {
+      order: 1;
+      width: initial;
+      padding: 0;
+    }
+    .t1 {
+      order: 2;
+      margin: 40px 6% 0 8%;
+      padding: 0;
+      .tt1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 47px;
+      }
+      .tt2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 33px;
+      }
+    }
+    .man {
+      order: 3;
+      width: initial;
+      &-photo {
+        margin: 90px 0px 0px 50px;
+      }
+    }
+    .t2 {
+      order: 4;
+      width: initial;
+      margin: 70px 0 0 5%;
+      padding: 20px 40px 90px 25px;
+      .tt1 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 47px;
+      }
+      .tt2 {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 31px;
+      }
+    }
+  }
+  .sec5 {
+    &-wrapper {
+      border-radius: 0px 188px 0px 0px;
+      &::before {
+        display: none;
+      }
+    }
+    &_inner {
+      padding: 170px 0px 50px 0%;
+      text-align: initial;
+      &::after {
+        display: none;
+      }
+      &::before {
+        top: 380px;
+        left: -60px;
+        content: url(../img/arrow4-mobile.svg);
+      }
+      .sec5-logo {
+        margin-top: 540px;
+        text-align: center;
+      }
+      .schedule_eye {
+        top: 620px;
+        left: 55px;
+      }
+    }
+    .eye10 {
+      top: 410px;
+      left: 150px;
+    }
+
+    .register_btn {
+      top: 240px;
+      left: calc(50% - 150px);
     }
   }
 }
