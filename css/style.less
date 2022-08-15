@@ -191,6 +191,9 @@ button {
     .anim;
   }
   &:hover {
+    // .blink {
+    //   opacity: 1;
+    // }
     .logo1-text-eye circle {
       animation: move 0.8s linear;
     }
@@ -202,6 +205,9 @@ button {
     }
   }
 }
+// .blink {
+//   opacity: 0;
+// }
 .schedule {
   position: relative;
   padding: 5px 39px 0px 0px;
@@ -505,6 +511,9 @@ button {
       fill: #f4c0ff;
     }
     &:hover {
+      // .blink {
+      //   opacity: 1;
+      // }
       .eye-slide_up {
         transform: translateY(-30px);
       }
@@ -807,6 +816,9 @@ button {
       .anim;
     }
     &:hover {
+      // .blink {
+      //   opacity: 1;
+      // }
       .eye-slide_up {
         transform: translateY(-30px);
       }
@@ -1060,10 +1072,11 @@ button {
       width: 225px;
     }
     .logo_eye {
-      top: -6px;
+      top: 12px;
       right: 27px;
       svg {
         width: 33px;
+        height: 15px;
       }
     }
     .logo1-text-eye {
@@ -1152,10 +1165,10 @@ button {
         right: -22px;
       }
       .schedule_eye {
-        top: 120px;
-        right: 22px;
+        top: 65%;
+        right: -4%;
         svg {
-          width: 55px;
+          height: 25px;
         }
       }
       .tt1 {
@@ -1248,16 +1261,18 @@ button {
         top: 58px;
         left: 56px;
         &-pupil {
-          top: 5px;
+          top: 2px;
           width: 4px;
+          transition: none;
         }
       }
       .maneye2 {
         top: 54px;
         left: 85px;
         &-pupil {
-          top: 5px;
+          top: 2px;
           width: 4px;
+          transition: none;
         }
       }
     }
@@ -1287,6 +1302,14 @@ button {
       }
     }
     &_inner {
+      &:hover {
+        .eye-slide_up {
+          transform: none;
+        }
+        .eye-slide_down {
+          transform: none;
+        }
+      }
       padding: 170px 0px 50px 0%;
       text-align: initial;
       &::after {
@@ -1382,17 +1405,17 @@ button {
     }
     .eye2-pupil-orange {
       position: absolute;
-      top: 17px;
+      top: 10px;
       left: 31px;
     }
     .eye2-pupil-black {
       position: absolute;
-      top: 23px;
+      top: 15px;
       left: 38px;
     }
     .eye2-pupil {
       position: absolute;
-      top: 30px;
+      top: 20px;
       left: 45px;
     }
   }
@@ -1569,17 +1592,17 @@ button {
     }
     .eye8-pupil-orange {
       position: absolute;
-      top: 55px;
+      top: 5px;
       left: 79px;
     }
     .eye8-pupil-black {
       position: absolute;
-      top: 65px;
+      top: 0px;
       left: 90px;
     }
     .eye8-pupil {
       position: absolute;
-      top: 72px;
+      top: 0px;
       left: 105px;
     }
     .eye-line1 {
@@ -1606,17 +1629,17 @@ button {
     }
     .eye9-pupil-orange {
       position: absolute;
-      top: 44px;
+      top: 15px;
       left: 61px;
     }
     .eye9-pupil-black {
       position: absolute;
-      top: 51px;
+      top: 14px;
       left: 69px;
     }
     .eye9-pupil {
       position: absolute;
-      top: 58px;
+      top: 15px;
       left: 79px;
     }
   }
@@ -1638,17 +1661,17 @@ button {
     }
     .eye10-pupil-orange {
       position: absolute;
-      top: 9px;
+      top: 0px;
       left: 15px;
     }
     .eye10-pupil-black {
       position: absolute;
-      top: 13px;
+      top: 2px;
       left: 20px;
     }
     .eye10-pupil {
       position: absolute;
-      top: 16px;
+      top: 3px;
       left: 22px;
     }
   }

@@ -999,11 +999,12 @@ button {
     width: 225px;
   }
   .logo .logo_eye {
-    top: -6px;
+    top: 12px;
     right: 27px;
   }
   .logo .logo_eye svg {
     width: 33px;
+    height: 15px;
   }
   .logo .logo1-text-eye {
     top: 6px;
@@ -1084,11 +1085,11 @@ button {
     right: -22px;
   }
   .sec3 .t2 .schedule_eye {
-    top: 120px;
-    right: 22px;
+    top: 65%;
+    right: -4%;
   }
   .sec3 .t2 .schedule_eye svg {
-    width: 55px;
+    height: 25px;
   }
   .sec3 .t2 .tt1 {
     font-weight: 700;
@@ -1181,16 +1182,18 @@ button {
     left: 56px;
   }
   .sec4 .man .maneye1-pupil {
-    top: 5px;
+    top: 2px;
     width: 4px;
+    transition: none;
   }
   .sec4 .man .maneye2 {
     top: 54px;
     left: 85px;
   }
   .sec4 .man .maneye2-pupil {
-    top: 5px;
+    top: 2px;
     width: 4px;
+    transition: none;
   }
   .sec4 .t2 {
     order: 4;
@@ -1220,6 +1223,12 @@ button {
   .sec5_inner {
     padding: 170px 0px 50px 0%;
     text-align: initial;
+  }
+  .sec5_inner:hover .eye-slide_up {
+    transform: none;
+  }
+  .sec5_inner:hover .eye-slide_down {
+    transform: none;
   }
   .sec5_inner::after {
     display: none;
@@ -1311,17 +1320,17 @@ button {
   }
   .eye2-mobile .eye2-pupil-orange {
     position: absolute;
-    top: 17px;
+    top: 10px;
     left: 31px;
   }
   .eye2-mobile .eye2-pupil-black {
     position: absolute;
-    top: 23px;
+    top: 15px;
     left: 38px;
   }
   .eye2-mobile .eye2-pupil {
     position: absolute;
-    top: 30px;
+    top: 20px;
     left: 45px;
   }
   .eye3-mobile {
@@ -1497,17 +1506,17 @@ button {
   }
   .eye8-mobile .eye8-pupil-orange {
     position: absolute;
-    top: 55px;
+    top: 5px;
     left: 79px;
   }
   .eye8-mobile .eye8-pupil-black {
     position: absolute;
-    top: 65px;
+    top: 0px;
     left: 90px;
   }
   .eye8-mobile .eye8-pupil {
     position: absolute;
-    top: 72px;
+    top: 0px;
     left: 105px;
   }
   .eye8-mobile .eye-line1 {
@@ -1534,17 +1543,17 @@ button {
   }
   .eye9-mobile .eye9-pupil-orange {
     position: absolute;
-    top: 44px;
+    top: 15px;
     left: 61px;
   }
   .eye9-mobile .eye9-pupil-black {
     position: absolute;
-    top: 51px;
+    top: 14px;
     left: 69px;
   }
   .eye9-mobile .eye9-pupil {
     position: absolute;
-    top: 58px;
+    top: 15px;
     left: 79px;
   }
   .eye10-mobile {
@@ -1566,17 +1575,17 @@ button {
   }
   .eye10-mobile .eye10-pupil-orange {
     position: absolute;
-    top: 9px;
+    top: 0px;
     left: 15px;
   }
   .eye10-mobile .eye10-pupil-black {
     position: absolute;
-    top: 13px;
+    top: 2px;
     left: 20px;
   }
   .eye10-mobile .eye10-pupil {
     position: absolute;
-    top: 16px;
+    top: 3px;
     left: 22px;
   }
   .eye11-mobile {
