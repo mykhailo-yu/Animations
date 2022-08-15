@@ -78,6 +78,13 @@ if (clientWidth < 1140) {
         scrollTab(top);
 
     };
+    document.onmousemove = (event) => {
+        x = event.clientX
+        y = event.clientY
+        if (isVein === true) {
+            cursorMove()
+        }
+    }
     setInterval(() => {
         // for (const blin of blink) {
         //     blin.style.opacity = "1"
