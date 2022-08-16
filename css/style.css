@@ -520,7 +520,7 @@ button {
   transform: translateY(30px);
 }
 .sec3 .t2 .tt1 .mobileTxt {
-  display: initial;
+  display: none;
 }
 .sec3 .t2 .tt2 {
   margin-top: 27px;
