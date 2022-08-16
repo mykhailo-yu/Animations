@@ -54,16 +54,11 @@ button {
   margin: 0 auto;
   position: relative;
 }
-.eye1-mobile,
 .eye2-mobile,
 .eye3-mobile,
 .eye4-mobile,
 .eye5-mobile,
 .eye6-mobile,
-.eye7-mobile,
-.eye8-mobile,
-.eye9-mobile,
-.eye10-mobile,
 .eye11-mobile,
 .eye12-mobile {
   display: none;
@@ -148,8 +143,16 @@ button {
   &-wrapper {
     position: relative;
   }
-  .eye1-1_bg {
+  .eye1-shadow {
     position: absolute;
+    mix-blend-mode: multiply;
+    top: -35px;
+    left: 50px;
+  }
+  .eye1-1-bg {
+    position: absolute;
+    left: 63px;
+    top: 82px;
   }
   .eye1_veins {
     position: absolute;
@@ -269,7 +272,7 @@ button {
     padding-bottom: 186px;
     text-align: center;
     position: relative;
-    &::after {
+    &::before {
       position: absolute;
       content: url(../img/arrow2.svg);
       top: 615px;
@@ -298,7 +301,12 @@ button {
     position: absolute;
     bottom: -276px;
     left: 49vw;
-    z-index: 99;
+    .eye4-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: -7px;
+      left: -2px;
+    }
     .eye4-bg {
       position: absolute;
       top: -12px;
@@ -335,10 +343,16 @@ button {
     .eyes5-wrapper {
       position: relative;
     }
+    .eye5-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 367px;
+      right: 471px;
+    }
     .eye5-bg {
       position: absolute;
-      top: 374px;
-      right: 469px;
+      top: 381px;
+      right: 484px;
     }
 
     .eye5-veins {
@@ -361,10 +375,16 @@ button {
       top: 404px;
       right: 553px;
     }
+    .eye6-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 0px;
+      right: 170px;
+    }
     .eye6-bg {
       position: absolute;
-      top: -31px;
-      right: -49px;
+      top: 50px;
+      right: 173px;
     }
 
     .eye6-veins {
@@ -387,10 +407,16 @@ button {
       top: 144px;
       right: 293px;
     }
+    .eye7-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 176px;
+      right: 475px;
+    }
     .eye7-bg {
       position: absolute;
-      top: 180px;
-      right: 476px;
+      top: 184px;
+      right: 483px;
     }
 
     .eye7-veins {
@@ -536,6 +562,11 @@ button {
         transform: translateY(30px);
       }
     }
+    .tt1 {
+      .mobileTxt {
+        display: initial;
+      }
+    }
     .tt2 {
       margin-top: 27px;
       font-weight: 400;
@@ -604,8 +635,16 @@ button {
     &-wrapper {
       position: relative;
     }
-    .eyes33-bg {
+    .eye331-shadow {
       position: absolute;
+      mix-blend-mode: multiply;
+      top: 0px;
+      left: 0px;
+    }
+    .eye331-bg {
+      position: absolute;
+      top: 14px;
+      left: 19px;
     }
     .eye331-veins {
       position: absolute;
@@ -914,10 +953,16 @@ button {
     .eye10-wraper {
       position: relative;
     }
+    .eye10-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 6px;
+      right: 8px;
+    }
     .eye10-bg {
       position: absolute;
-      top: 0px;
-      right: 0px;
+      top: 10px;
+      right: 13px;
     }
 
     .eye10-veins {
@@ -948,10 +993,16 @@ button {
     .eyes6-wrapper {
       position: relative;
     }
+    .eye8-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: -76px;
+      left: 6px;
+    }
     .eye8-bg {
       position: absolute;
-      top: -163px;
-      left: 0px;
+      top: -54px;
+      left: 46px;
     }
 
     .eye8-veins {
@@ -974,10 +1025,16 @@ button {
       top: -15px;
       left: 113px;
     }
+    .eye9-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: -6px;
+      left: 271px;
+    }
     .eye9-bg {
       position: absolute;
-      top: -16px;
-      left: 262px;
+      top: 9px;
+      left: 302px;
     }
 
     .eye9-veins {
@@ -1013,10 +1070,16 @@ button {
     .eyes7-wrapper {
       position: relative;
     }
+    .eye11-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: -60px;
+      right: 90px;
+    }
     .eye11-bg {
       position: absolute;
-      top: -74px;
-      right: 0px;
+      top: -36px;
+      right: 86px;
     }
     .eye11-veins {
       position: absolute;
@@ -1115,9 +1178,10 @@ button {
   // }
   .header_inner {
     flex-direction: column;
-    padding: 15px 30px 15px 30px;
+    padding: 27px 30px 13px 30px;
   }
   .logo_eye {
+    display: none;
     top: 12px;
     right: 27px;
     svg {
@@ -1128,18 +1192,17 @@ button {
   .logo {
     position: relative;
     img {
-      width: 225px;
+      width: 303px;
     }
 
     .logo1-text-eye {
-      top: -2px;
-      left: 101px;
+      top: 0px;
+      left: 139px;
     }
   }
 
   .schedule {
-    // display: inline-flex;
-    // gap: 21px;
+    margin-top: 9px;
     padding: 0px;
     font-weight: 1000;
     font-size: 16px;
@@ -1147,121 +1210,132 @@ button {
     text-align: center;
   }
   .sec2 {
+    margin: 0;
     &-wrapper {
       border-radius: 0px 0px 0px 188px;
     }
     &_inner {
-      padding-top: 29px;
-      padding-bottom: 372px;
-
-      &::after {
+      padding-top: 167px;
+      padding-bottom: 290px;
+      &::before {
         content: url(../img/arrow2-mobile.svg);
-        top: 490px;
-        left: calc(50% - 142px);
+        top: 558px;
+        left: calc(46% - 142px);
       }
     }
     .tt1 {
       font-weight: 800;
-      font-size: 60px;
-      line-height: 72px;
+      font-size: 45px;
+      margin-top: 2px;
     }
-    .dryeye img {
-      height: 44px;
+    .dryeye {
+      height: 95px;
+      img {
+        height: 51px;
+      }
     }
     .t2 {
       font-weight: 400;
-      font-size: 20px;
-      line-height: 24px;
-      padding: 8px 40px 0px 48px;
+      font-size: 17px;
+      padding: 8px 39px 0px 43px;
       text-align: center;
     }
     .register_btn {
-      margin: 45px 0 0 0px;
+      margin: 72px 0 0 27px;
     }
   }
   .sec3 {
-    margin-top: 77px;
-    &_inner {
-    }
+    margin-top: 275px;
     .main_content {
       flex-direction: column;
     }
     .t1 {
-      padding-left: 50px;
+      padding-left: 0px;
       font-weight: 800;
       font-size: 60px;
       line-height: 72px;
       margin-bottom: 26px;
+      text-align: center;
     }
     .t2 {
-      padding: 28px 46px 37px 50px;
+      padding: 28px 46px 253px 50px;
       border-radius: 0;
       width: 100%;
-      margin-top: 230px;
+      margin-top: 484px;
       .schedule_eye {
-        top: 50%;
+        top: 82%;
         &1 {
-          left: calc(10vw - 25px);
+          left: calc(29vw - 50px);
           &::before {
             content: "";
             display: none;
           }
         }
         &2 {
-          right: calc(10vw - 25px);
+          right: calc(29vw - 50px);
           &::before {
             content: "";
             display: none;
           }
         }
         svg {
-          height: 25px;
-          width: 50px;
+          height: 52px;
+          width: 100px;
         }
       }
       .tt1 {
-        img {
-          width: 300px;
+        margin-top: 67px;
+        .desktopTxt {
+          display: none;
+        }
+        .mobileTxt {
+          display: initial;
         }
       }
       .tt2 {
+        margin-top: 83px;
         max-width: none;
-        margin-top: 16px;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 29px;
+        font-size: 30px;
+        line-height: 44px;
+        text-align: center;
       }
     }
     .tabs {
       position: relative;
-      margin-top: 0;
-      font-weight: 700;
+      margin-top: 59px;
+      font-weight: 500;
       font-size: 20px;
-      line-height: 24px;
-      padding-left: 39px;
-      width: 95%;
-      margin-left: 1%;
+      padding-left: 51px;
+      padding-bottom: 12px;
+      width: 90%;
+      margin-left: 8%;
       .tabs-item {
-        margin-bottom: 20px;
+        margin-bottom: 42px;
       }
       &::after {
         width: 99%;
-        height: 98%;
-        bottom: -12px;
+        height: 100%;
+        bottom: -14px;
         right: -12px;
+        border-right: none;
       }
       .schedule_eye {
-        top: 90px;
-        right: 15px;
+        top: 127px;
+        right: 45px;
+        svg {
+          width: 55px;
+          height: 29px;
+        }
       }
     }
     .eyes33 {
-      top: 600px;
-      left: 70px;
+      top: 928px;
+      left: 53px;
     }
   }
   .sec4 {
-    margin-top: 9px;
+    margin-top: 37px;
     &-main {
       flex-direction: column;
       align-items: center;
@@ -1269,63 +1343,63 @@ button {
     }
     .marquee-text {
       font-weight: 800;
-      font-size: 60px;
-      line-height: 72px;
+      font-size: 28px;
       .show-format img {
-        width: 45px;
-        height: 45px;
+        width: 25px;
+        height: 25px;
       }
     }
     .zoom-photo {
-      order: 1;
+      order: 3;
       width: initial;
       padding: 0;
-      img {
-        width: 181px;
-      }
+      margin-top: 95px;
     }
     .t1 {
       order: 2;
-      margin: 40px 6% 0 8%;
+      margin: 168px 8% 0 8%;
       padding: 0;
       .tt1 {
         font-weight: 700;
-        font-size: 30px;
-        line-height: 47px;
+        font-size: 40px;
+        line-height: 62px;
+        text-align: center;
       }
       .tt2 {
+        margin-top: 39px;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 33px;
+        font-size: 30px;
+        line-height: 47px;
+        text-align: center;
       }
     }
     .man {
-      order: 3;
+      order: 1;
       width: initial;
       &-photo {
-        width: 144px;
-        height: 144px;
-        margin: 90px 0px 0px 0px;
+        width: 195px;
+        height: 195px;
+        margin: 55px 0px 0px -17px;
         .img {
-          width: 144px;
+          width: 195px;
         }
       }
       &-eye-closed {
-        width: 144px;
+        width: 195px;
         right: 0px !important;
       }
       .round-text {
-        width: 220px;
-        height: 220px;
-        left: -38px;
-        top: -39px;
+        width: 330px;
+        height: 330px;
+        left: -68px;
+        top: -65px;
       }
       .veins {
-        width: 12px;
+        width: 17px;
       }
       .maneye1 {
-        top: 58px;
-        left: 56px;
+        top: 83px;
+        left: 79px;
         &-pupil {
           top: 2px;
           width: 4px;
@@ -1333,8 +1407,8 @@ button {
         }
       }
       .maneye2 {
-        top: 54px;
-        left: 85px;
+        top: 79px;
+        left: 116px;
         &-pupil {
           top: 2px;
           width: 4px;
@@ -1345,22 +1419,30 @@ button {
     .t2 {
       order: 4;
       width: initial;
-      margin: 70px 0 0 5%;
-      padding: 20px 40px 90px 25px;
+      margin: 111px 0 0 5%;
+      padding: 92px 53px 128px 42px;
+      &::after {
+        width: 104%;
+        height: 99%;
+        bottom: 25px;
+      }
       .tt1 {
         font-weight: 700;
-        font-size: 30px;
-        line-height: 47px;
+        font-size: 40px;
+        line-height: 62px;
+        text-align: center;
       }
       .tt2 {
+        margin-top: 63px;
         font-weight: 400;
-        font-size: 20px;
-        line-height: 31px;
+        font-size: 30px;
+        line-height: 47px;
+        text-align: center;
       }
     }
   }
   .sec5 {
-    margin-top: 30px;
+    margin-top: 347px;
     &-wrapper {
       border-radius: 0px 188px 0px 0px;
       &::before {
@@ -1376,23 +1458,25 @@ button {
           transform: none;
         }
       }
-      padding: 170px 0px 50px 0%;
+      padding: 170px 0px 75px 0%;
       text-align: initial;
       &::after {
-        display: none;
+        top: -337px;
+        left: 121px;
+        content: url(../img/arrow3-mobile.svg);
       }
       &::before {
-        top: 380px;
+        top: 225px;
         left: -60px;
         content: url(../img/arrow4-mobile.svg);
       }
       .sec5-logo {
-        margin-top: 442px;
+        margin-top: 478px;
         text-align: center;
       }
       .schedule_eye {
-        top: 155px;
-        left: 55px;
+        top: 450px;
+        left: 36px;
       }
     }
     .eye10 {
@@ -1401,68 +1485,38 @@ button {
     }
 
     .register_btn {
-      top: 240px;
+      top: 50px;
+
       left: calc(50% - 100px);
     }
   }
 
-  .eye1-mobile,
   .eye2-mobile,
   .eye3-mobile,
   .eye4-mobile,
   .eye5-mobile,
   .eye6-mobile,
-  .eye7-mobile,
-  .eye8-mobile,
-  .eye9-mobile,
-  .eye10-mobile,
   .eye11-mobile,
   .eye12-mobile {
     display: initial;
     position: absolute;
   }
-  .eye1-mobile {
-    top: -4px;
-    left: 49%;
-    .eye1-wrapper {
-      position: relative;
-    }
-    .eye1-bg {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
-    .eye1-veins {
-      position: absolute;
-      top: 1px;
-      left: 2px;
-    }
-    .eye1-pupil-orange {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-    }
-    .eye1-pupil-black {
-      position: absolute;
-      top: 1px;
-      left: 9px;
-    }
-    .eye1-pupil {
-      position: absolute;
-      top: 10px;
-      left: 11px;
-    }
-  }
   .eye2-mobile {
-    top: 212px;
-    right: 26%;
+    top: 562px;
+    right: 32%;
     .eye2-wrapper {
       position: relative;
     }
+    .eye2-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 0px;
+      left: 7px;
+    }
     .eye2-bg {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 4px;
+      left: 16px;
     }
     .eye2-veins {
       position: absolute;
@@ -1472,28 +1526,34 @@ button {
     .eye2-pupil-orange {
       position: absolute;
       top: 10px;
-      left: 31px;
+      left: 25px;
     }
     .eye2-pupil-black {
       position: absolute;
       top: 15px;
-      left: 38px;
+      left: 31px;
     }
     .eye2-pupil {
       position: absolute;
-      top: 20px;
-      left: 45px;
+      top: 19px;
+      left: 35px;
     }
   }
   .eye3-mobile {
-    top: 413px;
+    top: 534px;
     left: 0px;
     .eye3-wrapper {
       position: relative;
     }
+    .eye3-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 0px;
+      left: 0px;
+    }
     .eye3-bg {
       position: absolute;
-      top: 0px;
+      top: 35px;
       left: 0px;
     }
     .eye3-veins {
@@ -1503,57 +1563,64 @@ button {
     }
     .eye3-pupil-orange {
       position: absolute;
-      top: 100px;
+      top: 80px;
       left: 0px;
     }
     .eye3-pupil-black {
       position: absolute;
-      top: 115px;
+      top: 93px;
+
       left: 0px;
     }
     .eye3-pupil {
       position: absolute;
-      top: 135px;
+      top: 108px;
       left: 4px;
     }
     .eye4-veins {
       position: absolute;
-      top: 117px;
-      left: 84px;
+      top: 95px;
+      left: 61px;
     }
     .eye4-pupil-orange {
       position: absolute;
-      top: 152px;
-      left: 104px;
+      top: 119px;
+      left: 77px;
     }
     .eye4-pupil-black {
       position: absolute;
-      top: 164px;
-      left: 115px;
+      top: 129px;
+      left: 85px;
     }
     .eye4-pupil {
       position: absolute;
-      top: 178px;
-      left: 125px;
+      top: 139px;
+      left: 92px;
     }
     .eye-line {
       position: absolute;
-      top: 172px;
+      top: 135px;
       left: 0px;
       z-index: 1;
     }
   }
 
   .eye5-mobile {
-    top: 370px;
-    right: 244px;
+    top: 536px;
+    right: 216px;
     .eye5-wrapper {
       position: relative;
     }
+    .eye5-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 67px;
+      left: 74px;
+    }
     .eye5-bg {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 91px;
+      left: 105px;
     }
     .eye5-veins {
       position: absolute;
@@ -1577,16 +1644,22 @@ button {
     }
   }
   .eye6-mobile {
-    top: 650px;
-    left: calc(45vw - 33px);
+    top: 850px;
+    left: calc(44vw - 33px);
 
     .eye6-wrapper {
       position: relative;
     }
+    .eye6-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 9px;
+      left: 6px;
+    }
     .eye6-bg {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 20px;
+      left: 22px;
     }
     .eye6-veins {
       position: absolute;
@@ -1595,163 +1668,36 @@ button {
     }
     .eye6-pupil-orange {
       position: absolute;
-      top: 12px;
-      left: 21px;
+      top: 24px;
+      left: 33px;
     }
     .eye6-pupil-black {
       position: absolute;
-      top: 18px;
-      left: 27px;
+      top: 38px;
+      left: 49px;
     }
     .eye6-pupil {
       position: absolute;
-      top: 22px;
-      left: 33px;
-    }
-  }
-  .eye7-mobile {
-    bottom: 0px;
-    right: 40%;
-    .eye7-wrapper {
-      position: relative;
-    }
-    .eye7-bg {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
-    .eye7-veins {
-      position: absolute;
-      top: 12px;
-      left: 18px;
-    }
-    .eye7-pupil-orange {
-      position: absolute;
-      top: 26px;
-      left: 44px;
-    }
-    .eye7-pupil-black {
-      position: absolute;
-      top: 40px;
-      left: 60px;
-    }
-    .eye7-pupil {
-      position: absolute;
       top: 43px;
-      left: 70px;
-    }
-  }
-  .eye8-mobile {
-    top: -93px;
-    right: 288px;
-    .eye8-wrapper {
-      position: relative;
-    }
-    .eye8-bg {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
-    .eye8-veins {
-      position: absolute;
-      top: 36px;
-      left: 42px;
-    }
-    .eye8-pupil-orange {
-      position: absolute;
-      top: 5px;
-      left: 79px;
-    }
-    .eye8-pupil-black {
-      position: absolute;
-      top: 0px;
-      left: 90px;
-    }
-    .eye8-pupil {
-      position: absolute;
-      top: 0px;
-      left: 105px;
-    }
-    .eye-line1 {
-      position: absolute;
-      top: 159px;
-      left: 36px;
-    }
-  }
-  .eye9-mobile {
-    top: -61px;
-    right: 148px;
-    .eye9-wrapper {
-      position: relative;
-    }
-    .eye9-bg {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
-    .eye9-veins {
-      position: absolute;
-      top: 27px;
-      left: 35px;
-    }
-    .eye9-pupil-orange {
-      position: absolute;
-      top: 15px;
-      left: 61px;
-    }
-    .eye9-pupil-black {
-      position: absolute;
-      top: 14px;
-      left: 69px;
-    }
-    .eye9-pupil {
-      position: absolute;
-      top: 15px;
-      left: 79px;
-    }
-  }
-  .eye10-mobile {
-    top: 107px;
-    right: 253px;
-    .eye10-wrapper {
-      position: relative;
-    }
-    .eye10-bg {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-    }
-    .eye10-veins {
-      position: absolute;
-      top: 3px;
-      left: 7px;
-    }
-    .eye10-pupil-orange {
-      position: absolute;
-      top: 0px;
-      left: 15px;
-    }
-    .eye10-pupil-black {
-      position: absolute;
-      top: 2px;
-      left: 20px;
-    }
-    .eye10-pupil {
-      position: absolute;
-      top: 3px;
-      left: 22px;
+      left: 58px;
     }
   }
   .eye11-mobile {
-    top: 386px;
-    left: 35px;
+    top: 245px;
+    left: 37px;
     .eye11-wrapper {
       position: relative;
     }
+    .eye11-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 10px;
+      left: 11px;
+    }
     .eye11-bg {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 18px;
+      left: 25px;
     }
     .eye11-veins {
       position: absolute;
@@ -1775,15 +1721,21 @@ button {
     }
   }
   .eye12-mobile {
-    top: 406px;
+    top: 265px;
     left: 170px;
     .eye12-wrapper {
       position: relative;
     }
+    .eye12-shadow {
+      position: absolute;
+      mix-blend-mode: multiply;
+      top: 10px;
+      left: 9px;
+    }
     .eye12-bg {
       position: absolute;
-      top: 0px;
-      left: 0px;
+      top: 18px;
+      left: 25px;
     }
     .eye12-veins {
       position: absolute;

@@ -1,41 +1,7 @@
 let eyeSlideUp = document.querySelectorAll(".eye-slide_up1")
 let eyeSlideDown = document.querySelectorAll(".eye-slide_down1")
 let schedule = document.querySelector(".schedule")
-// let blink = document.querySelectorAll(".blink")
-// document.querySelector('.logo').onmouseover = () => {
-//     for (const eyeUp of eyeSlideUp) {
-//         eyeUp.style.transform = "translateY(-30px)"
-//     }
-//     for (const eyeDown of eyeSlideDown) {
-//         eyeDown.style.transform = "translateY(30px)"
-//     }
 
-// };
-// document.querySelector('.logo').onmouseout = () => {
-//     for (const eyeUp of eyeSlideUp) {
-//         eyeUp.style.transform = "initial"
-//     }
-//     for (const eyeDown of eyeSlideDown) {
-//         eyeDown.style.transform = "initial"
-//     }
-// };
-// schedule.onmouseover = () => {
-//     for (const eyeUp of eyeSlideUp) {
-//         eyeUp.style.transform = "translateY(-30px)"
-//     }
-//     for (const eyeDown of eyeSlideDown) {
-//         eyeDown.style.transform = "translateY(30px)"
-//     }
-
-// };
-// schedule.onmouseout = () => {
-//     for (const eyeUp of eyeSlideUp) {
-//         eyeUp.style.transform = "initial"
-//     }
-//     for (const eyeDown of eyeSlideDown) {
-//         eyeDown.style.transform = "initial"
-//     }
-// };
 let eyeSlideUp1 = document.querySelectorAll(".eye-slide_up")
 let eyeSlideDown1 = document.querySelectorAll(".eye-slide_down")
 let eyeBg = document.querySelectorAll('.eye_bg')
@@ -75,8 +41,6 @@ if (clientWidth < 1140) {
         eyeMoveMobile();
         let top = window.pageYOffset || document.documentElement.scrollTop
         yM = top / 2;
-        scrollTab(top);
-
     };
     document.onmousemove = (event) => {
         x = event.clientX
@@ -86,9 +50,6 @@ if (clientWidth < 1140) {
         }
     }
     setInterval(() => {
-        // for (const blin of blink) {
-        //     blin.style.opacity = "1"
-        // }
         for (const eyeUp of eyeSlideUp1) {
             eyeUp.style.transform = "translateY(-30px)"
         }
@@ -103,9 +64,6 @@ if (clientWidth < 1140) {
             for (const eyeDown of eyeSlideDown1) {
                 eyeDown.style.transform = "translateY(0px)"
             }
-            // for (const blin of blink) {
-            //     blin.style.opacity = "0"
-            // }
         }, 1000);
 
     }, 4000)
@@ -134,6 +92,22 @@ function eyeMove() {
         lengthDifferenceWidth[i] = lengthDifferenceWidth[i] - lengthDifferenceWidth[i] / 2
         lengthDifferenceHeight[i] = eyeBgHeight[i] - pupilsHeight[i]
         lengthDifferenceHeight[i] = lengthDifferenceHeight[i] - lengthDifferenceHeight[i] / 2
+        lengthDifferenceHeight[0] *= 1
+        lengthDifferenceHeight[1] *= 1
+        lengthDifferenceHeight[2] *= 1
+        lengthDifferenceHeight[3] *= 1
+        lengthDifferenceHeight[4] *= 0.95
+        lengthDifferenceHeight[5] *= 0.95
+        lengthDifferenceHeight[6] *= 0.95
+        lengthDifferenceHeight[7] *= 0.95
+        lengthDifferenceHeight[8] *= 0.95
+        lengthDifferenceHeight[9] *= 0.95
+        lengthDifferenceHeight[10] *= 0.95
+        lengthDifferenceHeight[11] *= 0.95
+        lengthDifferenceHeight[12] *= 0.95
+        lengthDifferenceHeight[13] *= 0.95
+        lengthDifferenceWidth[11] *= 0.95
+        lengthDifferenceWidth[13] *= 0.95
     }
     for (let i = 0; i < pupils.length; i++) {
         pupilsX[i] = Math.round(pupils[i].getBoundingClientRect().left) + Math.round(pupilsWidth[i] / 2)
@@ -166,16 +140,12 @@ function eyeMoveMobile() {
         lengthDifferenceHeightM[2] *= 0.8
         lengthDifferenceHeightM[3] *= 1
         lengthDifferenceHeightM[4] *= 1.2
-        lengthDifferenceHeightM[5] *= 1.2
-        lengthDifferenceHeightM[6] *= 1.1
-        lengthDifferenceHeightM[7] *= 1.1
+        lengthDifferenceHeightM[5] *= 1.1
+        lengthDifferenceHeightM[6] *= 1.2
+        lengthDifferenceHeightM[7] *= 1.2
         lengthDifferenceHeightM[8] *= 1.2
-        lengthDifferenceHeightM[9] *= 1.2
-        lengthDifferenceHeightM[10] *= 0.9
-        lengthDifferenceHeightM[11] *= 0.9
-        lengthDifferenceHeightM[12] *= 1.3
-        lengthDifferenceHeightM[13] *= 1.3
-        lengthDifferenceHeightM[14] *= 1.3
+        lengthDifferenceHeightM[9] *= 1
+        lengthDifferenceHeightM[10] *= 1
     }
     for (let i = 0; i < pupilsM.length; i++) {
         pupilsYM[i] = Math.round(pupilsM[i].getBoundingClientRect().top) + Math.round(pupilsHeightM[i] / 2)
@@ -236,50 +206,6 @@ document.getElementById("register_btn1").onmouseout = function () {
 }
 document.getElementById("register_btn2").onmouseout = function () {
     mouseOutBtn()
-}
-function scrollTab(topp) {
-    if (topp > 850 && topp < 900) {
-        openTabOnScroll('tabb1')
-        console.log('true')
-    } else if
-        (topp > 900 && topp < 950) {
-        openTabOnScroll('tabb2')
-    } else if
-        (topp > 950 && topp < 1000) {
-        openTabOnScroll('tabb3')
-    } else if
-        (topp > 1000 && topp < 1050) {
-        openTabOnScroll('tabb4')
-    } else if
-        (topp > 1050 && topp < 1100) {
-        openTabOnScroll('tabb5')
-    } else if
-        (topp > 1100 && topp < 1150) {
-        openTabOnScroll('tabb6')
-    } else if
-        (topp > 1150 && topp < 1200) {
-        openTabOnScroll('tabb7')
-    }
-}
-function openTab(evt, tabid) {
-    // Declare all variables
-    let i, tablinks;
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.querySelectorAll(".tabs-item")
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    evt.currentTarget.className += " active";
-}
-function openTabOnScroll(tabid) {
-    // Declare all variables
-    let i, tablinks;
-    // Get all elements with class="tablinks" and remove the class "active"
-    tablinks = document.querySelectorAll(".tabs-item")
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabid).className += " active";
 }
 let title = document.querySelector('.dryeyetitle')
 title.style.transform = "translateY(0px)"
