@@ -42,6 +42,7 @@ body {
   font-family: "TT Norms Pro";
   color: #000000;
   overflow-x: hidden;
+  overflow-anchor: none;
 }
 button {
   background: transparent;
@@ -1114,8 +1115,7 @@ button {
   // }
   .header_inner {
     flex-direction: column;
-    padding: 30px 30px 0px 30px;
-    // gap: 13px;
+    padding: 15px 30px 15px 30px;
   }
   .logo_eye {
     top: 12px;
@@ -1195,22 +1195,24 @@ button {
     }
     .t2 {
       padding: 28px 46px 37px 50px;
-      border-radius: none;
+      border-radius: 0;
       width: 100%;
-      margin-top: 39px;
-      &::before {
-        content: url(../img/exclamation_mark_mobile.svg);
-        width: 32px;
-        height: 32px;
-        right: -22px;
-      }
+      margin-top: 230px;
       .schedule_eye {
         top: 50%;
         &1 {
           left: calc(10vw - 25px);
+          &::before {
+            content: "";
+            display: none;
+          }
         }
         &2 {
           right: calc(10vw - 25px);
+          &::before {
+            content: "";
+            display: none;
+          }
         }
         svg {
           height: 25px;
@@ -1237,9 +1239,25 @@ button {
       font-size: 20px;
       line-height: 24px;
       padding-left: 39px;
+      width: 95%;
+      margin-left: 1%;
       .tabs-item {
         margin-bottom: 20px;
       }
+      &::after {
+        width: 99%;
+        height: 98%;
+        bottom: -12px;
+        right: -12px;
+      }
+      .schedule_eye {
+        top: 90px;
+        right: 15px;
+      }
+    }
+    .eyes33 {
+      top: 600px;
+      left: 70px;
     }
   }
   .sec4 {
@@ -1247,12 +1265,16 @@ button {
     &-main {
       flex-direction: column;
       align-items: center;
-      margin-top: 8px;
+      margin-top: 50px;
     }
     .marquee-text {
       font-weight: 800;
       font-size: 60px;
       line-height: 72px;
+      .show-format img {
+        width: 45px;
+        height: 45px;
+      }
     }
     .zoom-photo {
       order: 1;
@@ -1369,7 +1391,7 @@ button {
         text-align: center;
       }
       .schedule_eye {
-        top: 549px;
+        top: 155px;
         left: 55px;
       }
     }
@@ -1380,7 +1402,7 @@ button {
 
     .register_btn {
       top: 240px;
-      left: calc(50% - 150px);
+      left: calc(50% - 100px);
     }
   }
 

@@ -161,19 +161,21 @@ function eyeMoveMobile() {
     }
     for (let i = 0; i < eyeBgM.length; i++) {
         lengthDifferenceHeightM[i] = eyeBgHeightM[i] - pupilsHeightM[i]
-        lengthDifferenceHeightM[1] *= 1.2
-        lengthDifferenceHeightM[2] *= 1
+        lengthDifferenceHeightM[0] *= 1.1
+        lengthDifferenceHeightM[1] *= 0.8
+        lengthDifferenceHeightM[2] *= 0.8
         lengthDifferenceHeightM[3] *= 1
-        // lengthDifferenceHeightM[4] /= 1.1
+        lengthDifferenceHeightM[4] *= 1.2
         lengthDifferenceHeightM[5] *= 1.2
-        lengthDifferenceHeightM[6] *= 1.15
-        lengthDifferenceHeightM[7] *= 1.2
+        lengthDifferenceHeightM[6] *= 1.1
+        lengthDifferenceHeightM[7] *= 1.1
         lengthDifferenceHeightM[8] *= 1.2
-        lengthDifferenceHeightM[9] *= 0.8
-        lengthDifferenceHeightM[10] *= 0.8
-        lengthDifferenceHeightM[11] *= 1.3
+        lengthDifferenceHeightM[9] *= 1.2
+        lengthDifferenceHeightM[10] *= 0.9
+        lengthDifferenceHeightM[11] *= 0.9
         lengthDifferenceHeightM[12] *= 1.3
         lengthDifferenceHeightM[13] *= 1.3
+        lengthDifferenceHeightM[14] *= 1.3
     }
     for (let i = 0; i < pupilsM.length; i++) {
         pupilsYM[i] = Math.round(pupilsM[i].getBoundingClientRect().top) + Math.round(pupilsHeightM[i] / 2)
