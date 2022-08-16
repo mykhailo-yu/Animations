@@ -2,40 +2,40 @@ let eyeSlideUp = document.querySelectorAll(".eye-slide_up1")
 let eyeSlideDown = document.querySelectorAll(".eye-slide_down1")
 let schedule = document.querySelector(".schedule")
 // let blink = document.querySelectorAll(".blink")
-document.querySelector('.logo').onmouseover = () => {
-    for (const eyeUp of eyeSlideUp) {
-        eyeUp.style.transform = "translateY(-30px)"
-    }
-    for (const eyeDown of eyeSlideDown) {
-        eyeDown.style.transform = "translateY(30px)"
-    }
+// document.querySelector('.logo').onmouseover = () => {
+//     for (const eyeUp of eyeSlideUp) {
+//         eyeUp.style.transform = "translateY(-30px)"
+//     }
+//     for (const eyeDown of eyeSlideDown) {
+//         eyeDown.style.transform = "translateY(30px)"
+//     }
 
-};
-document.querySelector('.logo').onmouseout = () => {
-    for (const eyeUp of eyeSlideUp) {
-        eyeUp.style.transform = "initial"
-    }
-    for (const eyeDown of eyeSlideDown) {
-        eyeDown.style.transform = "initial"
-    }
-};
-schedule.onmouseover = () => {
-    for (const eyeUp of eyeSlideUp) {
-        eyeUp.style.transform = "translateY(-30px)"
-    }
-    for (const eyeDown of eyeSlideDown) {
-        eyeDown.style.transform = "translateY(30px)"
-    }
+// };
+// document.querySelector('.logo').onmouseout = () => {
+//     for (const eyeUp of eyeSlideUp) {
+//         eyeUp.style.transform = "initial"
+//     }
+//     for (const eyeDown of eyeSlideDown) {
+//         eyeDown.style.transform = "initial"
+//     }
+// };
+// schedule.onmouseover = () => {
+//     for (const eyeUp of eyeSlideUp) {
+//         eyeUp.style.transform = "translateY(-30px)"
+//     }
+//     for (const eyeDown of eyeSlideDown) {
+//         eyeDown.style.transform = "translateY(30px)"
+//     }
 
-};
-schedule.onmouseout = () => {
-    for (const eyeUp of eyeSlideUp) {
-        eyeUp.style.transform = "initial"
-    }
-    for (const eyeDown of eyeSlideDown) {
-        eyeDown.style.transform = "initial"
-    }
-};
+// };
+// schedule.onmouseout = () => {
+//     for (const eyeUp of eyeSlideUp) {
+//         eyeUp.style.transform = "initial"
+//     }
+//     for (const eyeDown of eyeSlideDown) {
+//         eyeDown.style.transform = "initial"
+//     }
+// };
 let eyeSlideUp1 = document.querySelectorAll(".eye-slide_up")
 let eyeSlideDown1 = document.querySelectorAll(".eye-slide_down")
 let eyeBg = document.querySelectorAll('.eye_bg')
@@ -279,3 +279,5 @@ function openTabOnScroll(tabid) {
     }
     document.getElementById(tabid).className += " active";
 }
+let title = document.querySelector('.dryeyetitle')
+title.style.transform = "translateY(0px)"

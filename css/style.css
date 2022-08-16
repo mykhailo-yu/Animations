@@ -64,14 +64,32 @@ button {
   top: -20px;
   left: 70px;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.header .eye-slide_up,
+.header .eye-slide_down {
+  transition: all ease 0.2s;
+}
+.header:hover .eye-slide_up {
+  transform: translateY(-30px);
+}
+.header:hover .eye-slide_down {
+  transform: translateY(30px);
+}
+.header-wrapper {
+  background-color: #ffffff;
+}
 .header_inner {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px 67px 15px 104px;
+  padding: 27px 67px 15px 127px;
 }
-.header-wrapper,
 .sec2-wrapper,
 .sec5-wrapper {
   position: relative;
@@ -105,8 +123,8 @@ button {
 }
 .eyes1 {
   position: absolute;
-  top: 61px;
-  left: 0px;
+  top: 436px;
+  left: -65px;
 }
 .eyes1-wrapper {
   position: relative;
@@ -161,40 +179,23 @@ button {
 }
 .logo {
   position: relative;
-  border: 3px solid #000000;
-  border-radius: 20px;
-  padding: 41px 400px 32px 25px;
 }
 .logo .logo1-text-eye {
   position: absolute;
-  top: 40px;
-  left: 160px;
-}
-.logo .logo_eye {
-  position: absolute;
-  top: 30px;
-  right: 46px;
-}
-.logo .eye-slide_up,
-.logo .eye-slide_down {
-  transition: all ease 0.2s;
+  top: 0px;
+  left: 140px;
 }
 .logo:hover .logo1-text-eye circle {
   animation: move 0.8s linear;
 }
-.logo:hover .eye-slide_up {
-  transform: translateY(-30px);
-}
-.logo:hover .eye-slide_down {
-  transform: translateY(30px);
-}
 .schedule {
   position: relative;
-  padding: 5px 39px 0px 0px;
+  padding: 0px 70px 0px 0px;
   font-weight: 1000;
   font-size: 31px;
   line-height: 37px;
   letter-spacing: 0.3px;
+  color: #a860c1;
 }
 .schedule .eyes3 {
   position: absolute;
@@ -228,47 +229,45 @@ button {
   color: #efcb52;
 }
 .sec2 {
-  margin-top: 0px;
+  margin-top: 118px;
 }
 .sec2-wrapper {
   border-radius: 0px 0px 125px 188px;
 }
 .sec2_inner {
-  padding-bottom: 242px;
+  padding-top: 141px;
+  padding-bottom: 186px;
   text-align: center;
   position: relative;
 }
 .sec2_inner::after {
   position: absolute;
   content: url(../img/arrow2.svg);
-  top: 365px;
-  left: 45vw;
+  top: 615px;
+  left: calc(46vw - 130px);
 }
-.sec2 .marquee-horizontal {
-  height: 137px;
-}
-.sec2 .track-horizontal {
-  animation: marquee-horizontal 40s linear infinite;
-  /* manipulate the speed of the marquee by changing "40s" line above*/
-}
-.sec2 .marquee-text {
-  margin-right: 8vw;
-  flex: 0 0 auto;
+.sec2 .t1 {
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 97px;
-  line-height: 116px;
+  font-size: 96px;
+}
+.sec2 .dryeye {
+  overflow: hidden;
+}
+.sec2 .dryeye .dryeyetitle {
+  transform: translateY(150px);
+  transition: transform 1s linear;
 }
 .sec2 .t2 {
-  margin-top: 18px;
+  margin-top: 0px;
   font-weight: 400;
   font-size: 30px;
   line-height: 36px;
 }
 .sec2 .eyes4 {
   position: absolute;
-  bottom: -11px;
-  left: 47.5vw;
+  bottom: -276px;
+  left: 49vw;
   z-index: 99;
 }
 .sec2 .eyes4 .eye4-bg {
@@ -301,35 +300,35 @@ button {
 }
 .sec2 .eyes5 {
   position: absolute;
-  top: 146px;
-  right: -93px;
+  top: 442px;
+  right: -174px;
 }
 .sec2 .eyes5 .eyes5-wrapper {
   position: relative;
 }
 .sec2 .eyes5 .eye5-bg {
   position: absolute;
-  top: 269px;
+  top: 374px;
   right: 469px;
 }
 .sec2 .eyes5 .eye5-veins {
   position: absolute;
-  top: 269px;
+  top: 374px;
   right: 477px;
 }
 .sec2 .eyes5 .eye5-pupil-orange {
   position: absolute;
-  top: 285px;
+  top: 389px;
   right: 520px;
 }
 .sec2 .eyes5 .eye5-pupil-black {
   position: absolute;
-  top: 293px;
+  top: 398px;
   right: 536px;
 }
 .sec2 .eyes5 .eye5-pupil {
   position: absolute;
-  top: 300px;
+  top: 404px;
   right: 553px;
 }
 .sec2 .eyes5 .eye6-bg {
@@ -345,46 +344,46 @@ button {
 .sec2 .eyes5 .eye6-pupil-orange {
   position: absolute;
   top: 89px;
-  right: 210px;
+  right: 180px;
 }
 .sec2 .eyes5 .eye6-pupil-black {
   position: absolute;
-  top: 99px;
-  right: 247px;
+  top: 119px;
+  right: 237px;
 }
 .sec2 .eyes5 .eye6-pupil {
   position: absolute;
-  top: 113px;
-  right: 298px;
+  top: 144px;
+  right: 293px;
 }
 .sec2 .eyes5 .eye7-bg {
   position: absolute;
-  top: 156px;
-  right: 462px;
+  top: 180px;
+  right: 476px;
 }
 .sec2 .eyes5 .eye7-veins {
   position: absolute;
-  top: 157px;
-  right: 466px;
+  top: 180px;
+  right: 480px;
 }
 .sec2 .eyes5 .eye7-pupil-orange {
   position: absolute;
-  top: 166px;
-  right: 489px;
+  top: 187px;
+  right: 502px;
 }
 .sec2 .eyes5 .eye7-pupil-black {
   position: absolute;
-  top: 170px;
-  right: 498px;
+  top: 191px;
+  right: 510px;
 }
 .sec2 .eyes5 .eye7-pupil {
   position: absolute;
-  top: 175px;
-  right: 506px;
+  top: 197px;
+  right: 519px;
 }
 .register_btn {
   position: relative;
-  margin: 56px 0 0 46px;
+  margin: 72px 0 0 0px;
   display: inline-block;
   padding: 14px 64px;
   background: #000000;
@@ -413,7 +412,7 @@ button {
   transform: scale(1.02) translate(-5px, -6px);
 }
 .sec3 {
-  margin-top: 64px;
+  margin-top: 452px;
 }
 .sec3_inner {
   position: relative;
@@ -421,9 +420,8 @@ button {
 .sec3 .main_content {
   flex-shrink: 0;
   position: relative;
-  display: grid;
-  column-gap: 5%;
-  grid-template-columns: 54% 35%;
+  display: flex;
+  flex-wrap: wrap;
 }
 .sec3 .main_content .active {
   display: block;
@@ -432,53 +430,60 @@ button {
   display: none;
 }
 .sec3 .t1 {
+  background-color: #ddb4ff;
+  color: transparent;
+  text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   padding-left: 105px;
   font-weight: 800;
   font-size: 97px;
   line-height: 116px;
   text-transform: uppercase;
   margin-bottom: 43px;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  flex: 0 0 50%;
 }
 .sec3 .t2 {
+  margin-top: 212px;
   position: relative;
-  padding: 82px 54px 88px 108px;
+  padding: 130px 0px 111px 0px;
   background: #b4a0ff;
   background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
   border-radius: 0px 20px 20px 0px;
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-.sec3 .t2::before {
-  position: absolute;
-  content: url(../img/exclamation_mark.svg);
-  top: -25px;
-  right: -34px;
-  width: 62px;
-  height: 62px;
-  z-index: 9;
-}
-.sec3 .t2::after {
-  position: absolute;
-  content: "";
-  width: 102%;
-  height: 98%;
-  bottom: 11px;
-  left: 0px;
-  border: 3px solid #000000;
-  border-left: none;
-  border-radius: 0 20px 20px 0;
+  flex: 0 0 100%;
+  text-align: center;
 }
 .sec3 .t2 .schedule_eye {
   position: absolute;
-  top: 87px;
-  right: 60px;
+}
+.sec3 .t2 .schedule_eye2 {
+  top: 125px;
+  right: calc(15vw - 112px);
+}
+.sec3 .t2 .schedule_eye2::before {
+  position: absolute;
+  content: url(../img/sec3-bg2.svg);
+  top: -294px;
+  right: -104px;
+}
+.sec3 .t2 .schedule_eye1 {
+  top: 125px;
+  left: calc(15vw - 112px);
+}
+.sec3 .t2 .schedule_eye1::before {
+  position: absolute;
+  content: url(../img/sec3-bg1.svg);
+  top: -125px;
+  left: -102px;
+}
+.sec3 .t2 .schedule_eye svg {
+  width: 225px;
+  height: 117px;
 }
 .sec3 .t2 .eye-slide_up,
 .sec3 .t2 .eye-slide_down {
   transition: all ease 0.2s;
-  fill: #f4c0ff;
 }
 .sec3 .t2:hover .eye-slide_up {
   transform: translateY(-30px);
@@ -486,29 +491,48 @@ button {
 .sec3 .t2:hover .eye-slide_down {
   transform: translateY(30px);
 }
-.sec3 .t2 .tt1 {
-  padding-left: 0px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  text-transform: uppercase;
-}
 .sec3 .t2 .tt2 {
-  margin-top: 19px;
-  max-width: 612px;
+  margin-top: 27px;
   font-weight: 400;
   font-size: 30px;
   line-height: 44px;
 }
 .sec3 .tabs {
-  z-index: 999;
-  margin-top: 70px;
+  position: relative;
   list-style-type: none;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 30px;
-  color: #dbdbdb;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  flex: 0 0 40%;
+  background: #b4a0ff;
+  background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
+  border-radius: 20px;
+  padding: 63px 25px 43px 40px;
+}
+.sec3 .tabs::after {
+  position: absolute;
+  content: "";
+  width: 101%;
+  height: 98%;
+  bottom: -15px;
+  right: -20px;
+  border: 3px solid #000000;
+  border-radius: 20px;
+}
+.sec3 .tabs .schedule_eye {
+  position: absolute;
+  top: 73px;
+  right: 44px;
+}
+.sec3 .tabs .eye-slide_up,
+.sec3 .tabs .eye-slide_down {
+  transition: all ease 0.2s;
+  fill: #f3bfff;
+}
+.sec3 .tabs:hover .eye-slide_up {
+  transform: translateY(-30px);
+}
+.sec3 .tabs:hover .eye-slide_down {
+  transform: translateY(30px);
 }
 .sec3 .tabs .active {
   color: #000000;
@@ -516,53 +540,98 @@ button {
 .sec3 .tabs-item {
   margin-bottom: 28px;
   position: relative;
-  padding-left: 25px;
-  transition: all ease 0.2s;
+  padding-left: 40px;
 }
 .sec3 .tabs-item::before {
   position: absolute;
-  content: "•";
+  content: url(../img/tabs.svg);
   top: 0px;
   left: 0px;
 }
-.sec3 .tabs-item:hover {
-  color: #000000;
-  cursor: pointer;
+.sec3 .eyes33 {
+  position: absolute;
+  top: 276px;
+  left: 177px;
+}
+.sec3 .eyes33-wrapper {
+  position: relative;
+}
+.sec3 .eyes33 .eyes33-bg {
+  position: absolute;
+}
+.sec3 .eyes33 .eye331-veins {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+}
+.sec3 .eyes33 .eye331-pupil-orange {
+  position: absolute;
+  top: 29px;
+  left: 44px;
+}
+.sec3 .eyes33 .eye331-pupil-black {
+  position: absolute;
+  top: 38px;
+  left: 56px;
+}
+.sec3 .eyes33 .eye331-pupil {
+  position: absolute;
+  top: 45px;
+  left: 67px;
+}
+.sec3 .eyes33 .eye332-veins {
+  position: absolute;
+  top: 54px;
+  left: 172px;
+}
+.sec3 .eyes33 .eye332-pupil-orange {
+  position: absolute;
+  top: 68px;
+  left: 198px;
+}
+.sec3 .eyes33 .eye332-pupil-black {
+  position: absolute;
+  top: 77px;
+  left: 209px;
+}
+.sec3 .eyes33 .eye332-pupil {
+  position: absolute;
+  top: 82px;
+  left: 220px;
 }
 .sec4 {
-  margin-top: 51px;
+  margin-top: 175px;
 }
 .sec4 .marquee-horizontal {
   height: 114px;
 }
 .sec4 .track-horizontal {
   animation: marquee-horizontal 40s linear infinite;
-  /* manipulate the speed of the marquee by changing "40s" line above*/
 }
 .sec4 .marquee-text {
-  margin-right: 8vw;
+  margin-right: 2vw;
   flex: 0 0 auto;
   text-transform: uppercase;
   font-weight: 800;
-  font-size: 97px;
-  line-height: 116px;
+  font-size: 60px;
+  line-height: 72px;
 }
-.sec4 .marquee-text .bg-txt {
-  background: url(../img/bg-txt.png) no-repeat center / cover;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(81, 155, 254, 0.5);
+.sec4 .marquee-text .show-format {
+  display: inline-block;
+  height: 65px;
+}
+.sec4 .marquee-text .show-format img {
+  width: 65px;
+  height: 65px;
 }
 .sec4-main {
-  margin-top: 48px;
+  margin-top: 255px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .sec4 .man {
   position: relative;
-  /* max-width: 350px; */
-  /* margin-left: 5vw; */
-  /* flex: 0 0 21%; */
   width: 30%;
 }
 .sec4 .man .veins {
@@ -614,14 +683,14 @@ button {
   }
 }
 .sec4 .man svg text {
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 700;
-  letter-spacing: -2.8px;
+  letter-spacing: -1.2px;
 }
 .sec4 .man-photo {
   width: 232px;
   height: 232px;
-  margin: 29px 0px 0px 159px;
+  margin: 2px 0px 0px 170px;
   position: relative;
 }
 .sec4 .man-photo:hover .man-eye-closed {
@@ -638,7 +707,7 @@ button {
 }
 .sec4 .zoom-photo {
   width: 30%;
-  padding: 76px 0 0 109px;
+  padding: 240px 0 0 109px;
 }
 .sec4 .t1 {
   width: 70%;
@@ -656,8 +725,8 @@ button {
 }
 .sec4 .t2 {
   position: relative;
-  padding: 40px 140px 60px 58px;
-  margin-top: 70px;
+  padding: 40px 140px 106px 58px;
+  margin-top: 233px;
   background: #b4a0ff;
   background: linear-gradient(90deg, #b4a0ff 0%, #ddb3ff 54%, #ffc6ff 100%);
   border-radius: 20px 0px 0px 20px;
@@ -685,7 +754,7 @@ button {
   border-radius: 20px 0px 0px 20px;
 }
 .sec5 {
-  margin-top: 141px;
+  margin-top: 348px;
   position: relative;
 }
 .sec5-wrapper {
@@ -719,8 +788,8 @@ button {
 .sec5_inner::after {
   position: absolute;
   content: url(../img/arrow3.svg);
-  top: -134px;
-  right: -217px;
+  top: -324px;
+  right: -333px;
 }
 .sec5_inner .t1 {
   font-weight: 700;
@@ -728,7 +797,7 @@ button {
   line-height: 36px;
 }
 .sec5_inner .sec5-logo {
-  margin-top: 172px;
+  margin-top: 243px;
   position: relative;
 }
 .sec5_inner .sec5-logo .bottom-logo-eye {
@@ -741,17 +810,17 @@ button {
 }
 .sec5_inner .register_btn {
   position: absolute;
-  top: -6px;
-  left: 335px;
+  top: -23px;
+  left: 390px;
 }
 .sec5_inner .schedule_eye {
   position: absolute;
-  top: 159px;
-  left: 65px;
+  top: 110px;
+  left: 47px;
 }
 .sec5_inner .schedule_eye svg {
-  width: 181px;
-  height: 93px;
+  width: 225px;
+  height: 117px;
 }
 .sec5_inner .schedule_eye-open .eye-slide_up {
   transform: translateY(-30px);
@@ -771,8 +840,8 @@ button {
 }
 .sec5 .eye10 {
   position: absolute;
-  top: 176px;
-  left: 453px;
+  top: 170px;
+  left: 408px;
 }
 .sec5 .eye10 .eye10-wraper {
   position: relative;
@@ -784,23 +853,23 @@ button {
 }
 .sec5 .eye10 .eye10-veins {
   position: absolute;
-  top: 5px;
-  right: 9px;
+  top: 3px;
+  right: 6px;
 }
 .sec5 .eye10 .eye10-pupil-orange {
   position: absolute;
-  top: 14px;
-  right: 28px;
+  top: 9px;
+  right: 20px;
 }
 .sec5 .eye10 .eye10-pupil-black {
   position: absolute;
-  top: 20px;
-  right: 39px;
+  top: 16px;
+  right: 28px;
 }
 .sec5 .eye10 .eye10-pupil {
   position: absolute;
-  top: 23px;
-  right: 44px;
+  top: 20px;
+  right: 32px;
 }
 .sec5 .eyes6 {
   position: absolute;
@@ -867,8 +936,8 @@ button {
 }
 .sec5 .eyes7 {
   position: absolute;
-  top: 186px;
-  right: 0px;
+  top: 252px;
+  right: -87px;
 }
 .sec5 .eyes7 .eyes7-wrapper {
   position: relative;
@@ -897,31 +966,6 @@ button {
   position: absolute;
   top: 4px;
   right: 160px;
-}
-.sec5 .eyes7 .eye12-bg {
-  position: absolute;
-  top: -313px;
-  right: 0px;
-}
-.sec5 .eyes7 .eye12-veins {
-  position: absolute;
-  top: -290px;
-  right: 0px;
-}
-.sec5 .eyes7 .eye12-pupil-orange {
-  position: absolute;
-  top: -260px;
-  right: 50px;
-}
-.sec5 .eyes7 .eye12-pupil-black {
-  position: absolute;
-  top: -232px;
-  right: 88px;
-}
-.sec5 .eyes7 .eye12-pupil {
-  position: absolute;
-  top: -229px;
-  right: 107px;
 }
 .veins img,
 .veinsM img {
@@ -962,8 +1006,8 @@ button {
   top: -40px;
   left: -40px;
   position: fixed;
-  width: 81px;
-  height: 111px;
+  width: 215px;
+  height: 168px;
   pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -1017,11 +1061,6 @@ button {
     font-weight: 1000;
     font-size: 16px;
     line-height: 19px;
-  }
-  .dot img {
-    top: -10px;
-    left: 10px;
-    width: 16px;
   }
   .sec2-wrapper {
     border-radius: 0px 0px 0px 188px;
