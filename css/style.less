@@ -79,6 +79,7 @@ button {
   top: 0;
   left: 0;
   z-index: 999;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
   .logo_eye {
     // position: absolute;
     // top: 30px;
@@ -1113,38 +1114,37 @@ button {
   // }
   .header_inner {
     flex-direction: column;
-    padding: 31px 46px 0px 46px;
-    gap: 13px;
+    padding: 30px 30px 0px 30px;
+    // gap: 13px;
+  }
+  .logo_eye {
+    top: 12px;
+    right: 27px;
+    svg {
+      width: 33px;
+      height: 15px;
+    }
   }
   .logo {
     position: relative;
-    border: 3px solid #000000;
-    border-radius: 20px;
-    padding: 8px 87px 5px 21px;
     img {
       width: 225px;
     }
-    .logo_eye {
-      top: 12px;
-      right: 27px;
-      svg {
-        width: 33px;
-        height: 15px;
-      }
-    }
+
     .logo1-text-eye {
-      top: 6px;
-      left: 122px;
+      top: -2px;
+      left: 101px;
     }
   }
 
   .schedule {
-    display: inline-flex;
-    gap: 21px;
+    // display: inline-flex;
+    // gap: 21px;
     padding: 0px;
     font-weight: 1000;
     font-size: 16px;
     line-height: 19px;
+    text-align: center;
   }
   .sec2 {
     &-wrapper {
@@ -1156,16 +1156,11 @@ button {
 
       &::after {
         content: url(../img/arrow2-mobile.svg);
-
-        top: 340px;
-
+        top: 490px;
         left: calc(50% - 142px);
       }
     }
-    .marquee-horizontal {
-      height: 72px;
-    }
-    .marquee-text {
+    .tt1 {
       font-weight: 800;
       font-size: 60px;
       line-height: 72px;
@@ -1178,7 +1173,7 @@ button {
       font-size: 20px;
       line-height: 24px;
       padding: 8px 40px 0px 48px;
-      text-align: left;
+      text-align: center;
     }
     .register_btn {
       margin: 45px 0 0 0px;
@@ -1189,22 +1184,19 @@ button {
     &_inner {
     }
     .main_content {
-      grid-template-columns: 1fr;
+      flex-direction: column;
     }
     .t1 {
       padding-left: 50px;
       font-weight: 800;
       font-size: 60px;
       line-height: 72px;
-      grid-row-start: 1;
-      grid-row-end: 1;
       margin-bottom: 26px;
     }
     .t2 {
       padding: 28px 46px 37px 50px;
-      width: 89%;
-      grid-row-start: 3;
-      grid-row-end: 3;
+      border-radius: none;
+      width: 100%;
       margin-top: 39px;
       &::before {
         content: url(../img/exclamation_mark_mobile.svg);
@@ -1213,17 +1205,22 @@ button {
         right: -22px;
       }
       .schedule_eye {
-        top: 65%;
-        right: 1%;
+        top: 50%;
+        &1 {
+          left: calc(10vw - 25px);
+        }
+        &2 {
+          right: calc(10vw - 25px);
+        }
         svg {
           height: 25px;
           width: 50px;
         }
       }
       .tt1 {
-        font-weight: 700;
-        font-size: 25px;
-        line-height: 30px;
+        img {
+          width: 300px;
+        }
       }
       .tt2 {
         max-width: none;
@@ -1240,8 +1237,6 @@ button {
       font-size: 20px;
       line-height: 24px;
       padding-left: 39px;
-      grid-row-start: 2;
-      grid-row-end: 2;
       .tabs-item {
         margin-bottom: 20px;
       }
@@ -1437,7 +1432,7 @@ button {
     }
   }
   .eye2-mobile {
-    top: 182px;
+    top: 212px;
     right: 26%;
     .eye2-wrapper {
       position: relative;
@@ -1469,7 +1464,7 @@ button {
     }
   }
   .eye3-mobile {
-    top: 283px;
+    top: 413px;
     left: 0px;
     .eye3-wrapper {
       position: relative;
@@ -1528,7 +1523,7 @@ button {
   }
 
   .eye5-mobile {
-    top: 231px;
+    top: 370px;
     right: 244px;
     .eye5-wrapper {
       position: relative;
@@ -1560,8 +1555,9 @@ button {
     }
   }
   .eye6-mobile {
-    top: 570px;
-    left: 28%;
+    top: 650px;
+    left: calc(45vw - 33px);
+
     .eye6-wrapper {
       position: relative;
     }

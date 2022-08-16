@@ -69,6 +69,7 @@ button {
   top: 0;
   left: 0;
   z-index: 999;
+  box-shadow: 10px 0 20px rgba(0, 0, 0, 0.5);
 }
 .header .eye-slide_up,
 .header .eye-slide_down {
@@ -1030,37 +1031,32 @@ button {
   }
   .header_inner {
     flex-direction: column;
-    padding: 31px 46px 0px 46px;
-    gap: 13px;
+    padding: 30px 30px 0px 30px;
+  }
+  .logo_eye {
+    top: 12px;
+    right: 27px;
+  }
+  .logo_eye svg {
+    width: 33px;
+    height: 15px;
   }
   .logo {
     position: relative;
-    border: 3px solid #000000;
-    border-radius: 20px;
-    padding: 8px 87px 5px 21px;
   }
   .logo img {
     width: 225px;
   }
-  .logo .logo_eye {
-    top: 12px;
-    right: 27px;
-  }
-  .logo .logo_eye svg {
-    width: 33px;
-    height: 15px;
-  }
   .logo .logo1-text-eye {
-    top: 6px;
-    left: 122px;
+    top: -2px;
+    left: 101px;
   }
   .schedule {
-    display: inline-flex;
-    gap: 21px;
     padding: 0px;
     font-weight: 1000;
     font-size: 16px;
     line-height: 19px;
+    text-align: center;
   }
   .sec2-wrapper {
     border-radius: 0px 0px 0px 188px;
@@ -1071,13 +1067,10 @@ button {
   }
   .sec2_inner::after {
     content: url(../img/arrow2-mobile.svg);
-    top: 340px;
+    top: 490px;
     left: calc(50% - 142px);
   }
-  .sec2 .marquee-horizontal {
-    height: 72px;
-  }
-  .sec2 .marquee-text {
+  .sec2 .tt1 {
     font-weight: 800;
     font-size: 60px;
     line-height: 72px;
@@ -1090,7 +1083,7 @@ button {
     font-size: 20px;
     line-height: 24px;
     padding: 8px 40px 0px 48px;
-    text-align: left;
+    text-align: center;
   }
   .sec2 .register_btn {
     margin: 45px 0 0 0px;
@@ -1099,22 +1092,19 @@ button {
     margin-top: 77px;
   }
   .sec3 .main_content {
-    grid-template-columns: 1fr;
+    flex-direction: column;
   }
   .sec3 .t1 {
     padding-left: 50px;
     font-weight: 800;
     font-size: 60px;
     line-height: 72px;
-    grid-row-start: 1;
-    grid-row-end: 1;
     margin-bottom: 26px;
   }
   .sec3 .t2 {
     padding: 28px 46px 37px 50px;
-    width: 89%;
-    grid-row-start: 3;
-    grid-row-end: 3;
+    border-radius: none;
+    width: 100%;
     margin-top: 39px;
   }
   .sec3 .t2::before {
@@ -1124,17 +1114,20 @@ button {
     right: -22px;
   }
   .sec3 .t2 .schedule_eye {
-    top: 65%;
-    right: 1%;
+    top: 50%;
+  }
+  .sec3 .t2 .schedule_eye1 {
+    left: calc(10vw - 25px);
+  }
+  .sec3 .t2 .schedule_eye2 {
+    right: calc(10vw - 25px);
   }
   .sec3 .t2 .schedule_eye svg {
     height: 25px;
     width: 50px;
   }
-  .sec3 .t2 .tt1 {
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 30px;
+  .sec3 .t2 .tt1 img {
+    width: 300px;
   }
   .sec3 .t2 .tt2 {
     max-width: none;
@@ -1150,8 +1143,6 @@ button {
     font-size: 20px;
     line-height: 24px;
     padding-left: 39px;
-    grid-row-start: 2;
-    grid-row-end: 2;
   }
   .sec3 .tabs .tabs-item {
     margin-bottom: 20px;
@@ -1342,7 +1333,7 @@ button {
     left: 11px;
   }
   .eye2-mobile {
-    top: 182px;
+    top: 212px;
     right: 26%;
   }
   .eye2-mobile .eye2-wrapper {
@@ -1374,7 +1365,7 @@ button {
     left: 45px;
   }
   .eye3-mobile {
-    top: 283px;
+    top: 413px;
     left: 0px;
   }
   .eye3-mobile .eye3-wrapper {
@@ -1432,7 +1423,7 @@ button {
     z-index: 1;
   }
   .eye5-mobile {
-    top: 231px;
+    top: 370px;
     right: 244px;
   }
   .eye5-mobile .eye5-wrapper {
@@ -1464,8 +1455,8 @@ button {
     left: 140px;
   }
   .eye6-mobile {
-    top: 570px;
-    left: 28%;
+    top: 650px;
+    left: calc(45vw - 33px);
   }
   .eye6-mobile .eye6-wrapper {
     position: relative;
