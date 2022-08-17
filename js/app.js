@@ -55,7 +55,7 @@ if (clientWidth < 1140) {
     }
     setInterval(() => {
         for (const blinkk of blink) {
-            blinkk.style.opacity = "1"
+            blinkk.firstElementChild.style.opacity = "1"
         }
         for (const eyeUp of eyeSlideUp1) {
             eyeUp.style.transform = "translateY(-30px)"
@@ -72,7 +72,7 @@ if (clientWidth < 1140) {
                 eyeDown.style.transform = "translateY(0px)"
             }
             for (const blinkk of blink) {
-                blinkk.style.opacity = "0"
+                blinkk.firstElementChild.style.opacity = "0"
             }
         }, 1000);
 
