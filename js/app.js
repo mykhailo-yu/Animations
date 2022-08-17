@@ -1,7 +1,11 @@
 let eyeSlideUp = document.querySelectorAll(".eye-slide_up1")
 let eyeSlideDown = document.querySelectorAll(".eye-slide_down1")
 let schedule = document.querySelector(".schedule")
-
+let blink = document.querySelectorAll(".blink")
+let header = document.querySelector(".header")
+let tabs = document.querySelector(".tabs")
+let t2blink = document.querySelector(".t2blink")
+let sec5 = document.querySelector(".sec5_inner")
 let eyeSlideUp1 = document.querySelectorAll(".eye-slide_up")
 let eyeSlideDown1 = document.querySelectorAll(".eye-slide_down")
 let eyeBg = document.querySelectorAll('.eye_bg')
@@ -50,6 +54,9 @@ if (clientWidth < 1140) {
         }
     }
     setInterval(() => {
+        for (const blinkk of blink) {
+            blinkk.style.opacity = "1"
+        }
         for (const eyeUp of eyeSlideUp1) {
             eyeUp.style.transform = "translateY(-30px)"
         }
@@ -63,6 +70,9 @@ if (clientWidth < 1140) {
             }
             for (const eyeDown of eyeSlideDown1) {
                 eyeDown.style.transform = "translateY(0px)"
+            }
+            for (const blinkk of blink) {
+                blinkk.style.opacity = "0"
             }
         }, 1000);
 
@@ -209,3 +219,44 @@ document.getElementById("register_btn2").onmouseout = function () {
 }
 let title = document.querySelector('.dryeyetitle')
 title.style.transform = "translateY(0px)"
+
+header.onmouseover = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "1"
+    }
+}
+header.onmouseout = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "0"
+    }
+}
+tabs.onmouseover = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "1"
+    }
+}
+tabs.onmouseout = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "0"
+    }
+}
+t2blink.onmouseover = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "1"
+    }
+}
+t2blink.onmouseout = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "0"
+    }
+}
+sec5.onmouseover = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "1"
+    }
+}
+sec5.onmouseout = () => {
+    for (const blinkk of blink) {
+        blinkk.firstElementChild.style.opacity = "0"
+    }
+}
