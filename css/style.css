@@ -690,18 +690,18 @@ button {
 }
 .sec4 .man .maneye1-pupil {
   position: absolute;
-  top: 4px;
+  top: 3px;
   left: 5px;
   transition: none;
 }
 .sec4 .man .maneye2 {
-  top: 79px;
+  top: 78px;
   left: 118px;
   transform: rotate(-9deg);
 }
 .sec4 .man .maneye2-pupil {
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 6px;
   transition: none;
 }
@@ -1236,7 +1236,7 @@ button {
     border-right: none;
   }
   .sec3 .tabs .schedule_eye {
-    top: 127px;
+    top: 35px;
     right: 45px;
   }
   .sec3 .tabs .schedule_eye svg {
@@ -1315,18 +1315,20 @@ button {
   .sec4 .man .maneye1 {
     top: 83px;
     left: 79px;
+    overflow: hidden;
   }
   .sec4 .man .maneye1-pupil {
-    top: 2px;
+    top: -3px;
     width: 4px;
     transition: none;
   }
   .sec4 .man .maneye2 {
     top: 79px;
     left: 116px;
+    overflow: hidden;
   }
   .sec4 .man .maneye2-pupil {
-    top: 2px;
+    top: -2px;
     width: 4px;
     transition: none;
   }
@@ -1377,6 +1379,7 @@ button {
     top: -337px;
     left: 121px;
     content: url(../img/arrow3-mobile.svg);
+    width: 175px;
   }
   .sec5_inner::before {
     top: 225px;
@@ -1662,5 +1665,16 @@ button {
     position: absolute;
     top: 30px;
     left: 55px;
+  }
+}
+@media (min-width: 320px) and (max-width: 405px) {
+  .sec2 .register_btn {
+    margin: 30px 0 0 27px;
+  }
+  .sec3 .t2 {
+    padding: 28px 20px 253px 20px;
+  }
+  .sec3 .mobileTxt {
+    width: 300px;
   }
 }
