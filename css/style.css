@@ -65,7 +65,7 @@ button {
 }
 .blink svg {
   opacity: 0;
-  transition: opacity 0.2s linear;
+  transition: opacity 0.3s linear;
 }
 .header {
   position: fixed;
@@ -697,7 +697,7 @@ button {
 }
 .sec4 .man .maneye1-pupil {
   position: absolute;
-  top: 3px;
+  top: 4px;
   left: 5px;
   transition: none;
 }
@@ -708,7 +708,7 @@ button {
 }
 .sec4 .man .maneye2-pupil {
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 6px;
   transition: none;
 }
@@ -1325,17 +1325,18 @@ button {
     overflow: hidden;
   }
   .sec4 .man .maneye1-pupil {
-    top: -3px;
+    top: -10px;
+    left: 6px;
     width: 4px;
     transition: none;
   }
   .sec4 .man .maneye2 {
-    top: 79px;
+    top: 78px;
     left: 116px;
     overflow: hidden;
   }
   .sec4 .man .maneye2-pupil {
-    top: -2px;
+    top: -6px;
     width: 4px;
     transition: none;
   }
@@ -1678,10 +1679,28 @@ button {
   .sec2 .register_btn {
     margin: 30px 0 0 27px;
   }
+  .sec2_inner {
+    padding-bottom: 340px;
+  }
+  .sec2_inner::before {
+    top: 608px;
+  }
   .sec3 .t2 {
     padding: 28px 20px 253px 20px;
   }
   .sec3 .mobileTxt {
     width: 300px;
+  }
+  .eye2-mobile {
+    top: 602px;
+  }
+  .eye3-mobile {
+    top: 584px;
+  }
+  .eye5-mobile {
+    top: 586px;
+  }
+  .eye6-mobile {
+    top: 881px;
   }
 }

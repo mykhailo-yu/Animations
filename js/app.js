@@ -152,8 +152,8 @@ function eyeMoveMobile() {
         lengthDifferenceHeightM[4] *= 1.2
         lengthDifferenceHeightM[5] *= 1.1
         lengthDifferenceHeightM[6] *= 1.2
-        lengthDifferenceHeightM[7] *= 1.5
-        lengthDifferenceHeightM[8] *= 1.5
+        lengthDifferenceHeightM[7] *= 1.7
+        lengthDifferenceHeightM[8] *= 1.7
         lengthDifferenceHeightM[9] *= 1
         lengthDifferenceHeightM[10] *= 1
     }
