@@ -1397,16 +1397,16 @@ button {
     width: 175px;
   }
   .sec5_inner::before {
-    top: 150px;
+    top: 220px;
     left: -60px;
     content: url(../img/arrow4-mobile.svg);
   }
   .sec5_inner .sec5-logo {
-    margin-top: 290px;
+    margin-top: 380px;
     text-align: center;
   }
   .sec5_inner .schedule_eye {
-    top: 320px;
+    top: 400px;
     left: 36px;
   }
   .sec5 .eye10 {
@@ -1414,7 +1414,7 @@ button {
     left: 150px;
   }
   .sec5 .register_btn {
-    top: -5px;
+    top: 10px;
     left: calc(50% - 100px);
   }
   .eye2-mobile,
@@ -1606,8 +1606,8 @@ button {
     left: 58px;
   }
   .eye11-mobile {
-    top: 165px;
-    left: 37px;
+    top: 225px;
+    left: 25px;
   }
   .eye11-mobile .eye11-wrapper {
     position: relative;
@@ -1644,8 +1644,8 @@ button {
     left: 55px;
   }
   .eye12-mobile {
-    top: 205px;
-    left: 170px;
+    top: 255px;
+    left: 180px;
   }
   .eye12-mobile .eye12-wrapper {
     position: relative;
