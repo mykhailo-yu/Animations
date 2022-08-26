@@ -51,6 +51,9 @@ if (clientWidth < 1140) {
         y = event.clientY
         if (isVein === true) {
             cursorMove()
+            cursorContainer.style.opacity = '1'
+        } else {
+            cursorContainer.style.opacity = '0'
         }
     }
     setInterval(() => {
@@ -83,9 +86,11 @@ if (clientWidth < 1140) {
             x = event.clientX
             y = event.clientY
             eyeMove()
-            if (isVein === true) {
-                cursorMove()
-            }
+            // if (isVein === true) {
+            //     cursorMove()
+            // }
+            cursorContainer.style.opacity = '1'
+            cursorMove()
         }, 2000)
 }
 function eyeMove() {
@@ -176,8 +181,8 @@ function eyeMoveMobile() {
 }
 for (const veinP of veinsPseudo) {
     veinP.onmouseenter = function () {
-        cursorContainer.style.opacity = '1'
-        veinP.style.cursor = 'none'
+        //cursorContainer.style.opacity = '1'
+        //veinP.style.cursor = 'none'
         veinP.parentNode.firstElementChild.style.opacity = '0'
     }
     veinP.onmouseover = () => {
@@ -185,7 +190,7 @@ for (const veinP of veinsPseudo) {
     }
 
     veinP.onmouseout = function () {
-        cursorContainer.style.opacity = '0'
+        //cursorContainer.style.opacity = '0'
         isVein = false
         veinP.parentNode.firstElementChild.style.opacity = '1'
     }
@@ -197,12 +202,14 @@ function mouseOnBtn() {
     for (let i = 0; i < pupilsS.length; i++) {
         // pupils[i].style.scale = '1.1'
         pupilsS[i].className += " scalle"
+        cursorContainer.style.opacity = '0'
     }
 }
 function mouseOutBtn() {
     for (let i = 0; i < pupilsS.length; i++) {
         // pupils[i].style.scale = '1'
         pupilsS[i].className = pupilsS[i].className.replace(" scalle", "");
+        cursorContainer.style.opacity = '1'
     }
 }
 document.getElementById("register_btn1").onmouseenter = function () {

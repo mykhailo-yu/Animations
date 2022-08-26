@@ -35,6 +35,7 @@ body {
   color: #000000;
   overflow-x: hidden;
   overflow-anchor: none;
+  cursor: none;
 }
 .wrapper {
   overflow-x: hidden;
@@ -157,7 +158,7 @@ button {
 .eyes1 .eye1-pupil-black {
   position: absolute;
   top: 150px;
-  left: 100px;
+  left: 107px;
 }
 .eyes1 .eye1pupil {
   position: absolute;
@@ -1146,20 +1147,21 @@ button {
   }
   .sec2 .tt1 {
     font-weight: 800;
-    font-size: 45px;
+    font-size: 40px;
     margin-top: 2px;
   }
   .sec2 .dryeye {
     height: 95px;
   }
   .sec2 .dryeye img {
-    height: 51px;
+    height: 45px;
   }
   .sec2 .t2 {
     font-weight: 400;
     font-size: 17px;
     padding: 8px 39px 0px 43px;
     text-align: center;
+    line-height: 25px;
   }
   .sec2 .register_btn {
     margin: 72px 0 0 27px;
@@ -1173,19 +1175,19 @@ button {
   .sec3 .t1 {
     padding-left: 0px;
     font-weight: 800;
-    font-size: 60px;
-    line-height: 72px;
+    font-size: 55px;
+    line-height: 55px;
     margin-bottom: 26px;
     text-align: center;
   }
   .sec3 .t2 {
-    padding: 28px 46px 253px 50px;
+    padding: 28px 46px 90px 50px;
     border-radius: 0;
     width: 100%;
-    margin-top: 484px;
+    margin-top: 310px;
   }
   .sec3 .t2 .schedule_eye {
-    top: 82%;
+    top: 85%;
   }
   .sec3 .t2 .schedule_eye1 {
     left: calc(29vw - 50px);
@@ -1206,7 +1208,7 @@ button {
     width: 100px;
   }
   .sec3 .t2 .tt1 {
-    margin-top: 67px;
+    margin-top: 35px;
   }
   .sec3 .t2 .tt1 .desktopTxt {
     display: none;
@@ -1215,16 +1217,16 @@ button {
     display: initial;
   }
   .sec3 .t2 .tt2 {
-    margin-top: 83px;
+    margin-top: 40px;
     max-width: none;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 44px;
+    font-size: 28px;
+    line-height: 42px;
     text-align: center;
   }
   .sec3 .tabs {
     position: relative;
-    margin-top: 59px;
+    margin-top: 25px;
     font-weight: 500;
     font-size: 20px;
     padding-left: 51px;
@@ -1233,7 +1235,7 @@ button {
     margin-left: 8%;
   }
   .sec3 .tabs .tabs-item {
-    margin-bottom: 42px;
+    margin-bottom: 27px;
   }
   .sec3 .tabs::after {
     width: 99%;
@@ -1251,7 +1253,7 @@ button {
     height: 29px;
   }
   .sec3 .eyes33 {
-    top: 928px;
+    top: 700px;
     left: 53px;
   }
   .sec4 {
@@ -1260,7 +1262,7 @@ button {
   .sec4-main {
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
   }
   .sec4 .marquee-text {
     font-weight: 800;
@@ -1274,24 +1276,24 @@ button {
     order: 3;
     width: initial;
     padding: 0;
-    margin-top: 95px;
+    margin-top: 60px;
   }
   .sec4 .t1 {
     order: 2;
-    margin: 168px 8% 0 8%;
+    margin: 105px 8% 0 8%;
     padding: 0;
   }
   .sec4 .t1 .tt1 {
     font-weight: 700;
     font-size: 40px;
-    line-height: 62px;
+    line-height: 50px;
     text-align: center;
   }
   .sec4 .t1 .tt2 {
-    margin-top: 39px;
+    margin-top: 22px;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 47px;
+    font-size: 28px;
+    line-height: 42px;
     text-align: center;
   }
   .sec4 .man {
@@ -1305,6 +1307,11 @@ button {
   }
   .sec4 .man-photo .img {
     width: 195px;
+  }
+  .sec4 .man svg text {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
   }
   .sec4 .man-eye-closed {
     width: 195px;
@@ -1343,7 +1350,7 @@ button {
   .sec4 .t2 {
     order: 4;
     width: initial;
-    margin: 111px 0 0 5%;
+    margin: 95px 0 0 5%;
     padding: 92px 53px 128px 42px;
   }
   .sec4 .t2::after {
@@ -1354,18 +1361,18 @@ button {
   .sec4 .t2 .tt1 {
     font-weight: 700;
     font-size: 40px;
-    line-height: 62px;
+    line-height: 55px;
     text-align: center;
   }
   .sec4 .t2 .tt2 {
-    margin-top: 63px;
+    margin-top: 25px;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 47px;
+    font-size: 28px;
+    line-height: 43px;
     text-align: center;
   }
   .sec5 {
-    margin-top: 347px;
+    margin-top: 305px;
   }
   .sec5-wrapper {
     border-radius: 0px 188px 0px 0px;
@@ -1384,22 +1391,22 @@ button {
     transform: none;
   }
   .sec5_inner::after {
-    top: -337px;
+    top: -305px;
     left: 121px;
     content: url(../img/arrow3-mobile.svg);
     width: 175px;
   }
   .sec5_inner::before {
-    top: 225px;
+    top: 150px;
     left: -60px;
     content: url(../img/arrow4-mobile.svg);
   }
   .sec5_inner .sec5-logo {
-    margin-top: 478px;
+    margin-top: 290px;
     text-align: center;
   }
   .sec5_inner .schedule_eye {
-    top: 450px;
+    top: 320px;
     left: 36px;
   }
   .sec5 .eye10 {
@@ -1407,7 +1414,7 @@ button {
     left: 150px;
   }
   .sec5 .register_btn {
-    top: 50px;
+    top: -5px;
     left: calc(50% - 100px);
   }
   .eye2-mobile,
@@ -1599,7 +1606,7 @@ button {
     left: 58px;
   }
   .eye11-mobile {
-    top: 245px;
+    top: 165px;
     left: 37px;
   }
   .eye11-mobile .eye11-wrapper {
@@ -1623,21 +1630,21 @@ button {
   }
   .eye11-mobile .eye11-pupil-orange {
     position: absolute;
-    top: 17px;
+    top: 0px;
     left: 36px;
   }
   .eye11-mobile .eye11-pupil-black {
     position: absolute;
-    top: 27px;
+    top: 5px;
     left: 49px;
   }
   .eye11-mobile .eye11-pupil {
     position: absolute;
-    top: 30px;
+    top: 5px;
     left: 55px;
   }
   .eye12-mobile {
-    top: 265px;
+    top: 205px;
     left: 170px;
   }
   .eye12-mobile .eye12-wrapper {
@@ -1661,17 +1668,17 @@ button {
   }
   .eye12-mobile .eye12-pupil-orange {
     position: absolute;
-    top: 17px;
+    top: 0px;
     left: 36px;
   }
   .eye12-mobile .eye12-pupil-black {
     position: absolute;
-    top: 27px;
+    top: 5px;
     left: 49px;
   }
   .eye12-mobile .eye12-pupil {
     position: absolute;
-    top: 30px;
+    top: 5px;
     left: 55px;
   }
 }
@@ -1686,10 +1693,13 @@ button {
     top: 608px;
   }
   .sec3 .t2 {
-    padding: 28px 20px 253px 20px;
+    padding: 28px 20px 30% 20px;
   }
   .sec3 .mobileTxt {
     width: 300px;
+  }
+  .eye33 {
+    top: 730px;
   }
   .eye2-mobile {
     top: 602px;
