@@ -39,7 +39,7 @@ let veins = document.querySelectorAll('.veins')
 let veinsM = document.querySelectorAll('.veinsM')
 let x, y, yM
 let isVein = false
-
+let isButton = false
 if (clientWidth < 1140) {
     window.onscroll = () => {
         eyeMoveMobile();
@@ -89,7 +89,11 @@ if (clientWidth < 1140) {
             // if (isVein === true) {
             //     cursorMove()
             // }
-            cursorContainer.style.opacity = '1'
+            if (isButton === true) {
+                cursorContainer.style.opacity = '0'
+            } else {
+                cursorContainer.style.opacity = '1'
+            }
             cursorMove()
         }, 2000)
 }
@@ -202,15 +206,15 @@ function mouseOnBtn() {
     for (let i = 0; i < pupilsS.length; i++) {
         // pupils[i].style.scale = '1.1'
         pupilsS[i].className += " scalle"
-        cursorContainer.style.opacity = '0'
     }
+    isButton = true
 }
 function mouseOutBtn() {
     for (let i = 0; i < pupilsS.length; i++) {
         // pupils[i].style.scale = '1'
         pupilsS[i].className = pupilsS[i].className.replace(" scalle", "");
-        cursorContainer.style.opacity = '1'
     }
+    isButton = false
 }
 document.getElementById("register_btn1").onmouseenter = function () {
     mouseOnBtn()
